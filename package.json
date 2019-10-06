@@ -1,0 +1,38 @@
+{
+  "name": "repair-design-project",
+  "version": "1.0.0",
+  "description": "repair-design-project. Difficulty Level 3.",
+  "main": "script.js",
+  "scripts": {
+    "build": "node_modules/.bin/webpack --mode production",
+    "dev": "webpack-dev-server --mode development --open 'Google Chrome'"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 version"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muratx10/repair-design-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muratx10/repair-design-project/issues"
+  },
+  "homepage": "https://github.com/muratx10/repair-design-project#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.6.4",
+    "css-loader": "^3.2.0",
+    "cssnano": "^4.1.10",
+    "mini-css-extract-plugin": "^0.8.0",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.23.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2"
+  }
+}
