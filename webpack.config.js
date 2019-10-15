@@ -1,43 +1,60 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-
 const conf = {
-    entry: './script.js',
+    entry: './src/scripts/app.js',
     output: {
-        path: path.resolve(__dirname, ''),
+        path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
-        publicPath: '/'
     },
     devtool: 'source-map',
     devServer: {
-        publicPath: '/',
         watchContentBase: true,
         overlay: true
     },
+    mode: 'development',
     module: {
         rules: [
             {
                 test: /\.scss/,
                 use: [
-                    'style-loader',
-                    MiniCssExtractPlugin.loader,
                     {
-                        loader: 'css-loader',
-                        options: { sourceMap: true }
+                        loader: MiniCssExtractPlugin.loader
                     },
                     {
-                        loader: 'postcss-loader',
-                        options: { sourceMap: true, config: { path: './postcss.config.js' }}
+                        loader: 'css-loader'
+                    },
+                    {
+                        loader: 'postcss-loader'
                     },
                     {
                         loader: 'sass-loader',
-                        options:
-                            {
-                                // Prefer `dart-sass`
-                                implementation: require('sass'),
-                                sourceMap: true
-                            }
+                        options: {
+                            implementation: require('sass'),
+                            sourceMap: true
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: 'assets/images'
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.(woff|woff2|ttf|otf|eot)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: 'assets/fonts',
+                        }
                     }
                 ]
             }
@@ -45,10 +62,11 @@ const conf = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "./assets/styles/styles.css",
+            filename: "bundle.css",
             sourceMap: true
-        })
-    ]
+        }),
+    ],
+
 };
 
 module.exports = conf;
