@@ -1,0 +1,783 @@
+.logo {
+  display: grid;
+  grid: 1fr / 1fr;
+
+  .logo__textContent {
+    display: grid;
+    align-content: center;
+    margin: 0;
+    text-align: left;
+
+    .logo__link {
+      font-family: 'FuturaDemiC', Arial, sans-serif;
+      font-size: 0.875rem;
+      line-height: 1rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $coloredText;
+      @media only screen and (max-width: 568px) {
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 667px) {
+    display: block;
+
+  }
+}
+
+.navMenu {
+  display: grid;
+  align-content: center;
+
+  .navMenu__menuItemsBlock {
+    display: grid;
+    grid: 1fr / repeat(6, 1fr);
+    margin: 0;
+    padding: 0;
+
+    .navMenu__menuItem {
+      display: inline-block;
+      font-family: FuturaBookC, Arial, sans-serif;
+      font-size: 0.875rem;
+      text-align: center;
+      text-transform: uppercase;
+
+      .navMenu__link {
+        transition: 0.3s;
+        text-align: center;
+        text-decoration: none;
+        color: $whiteText;
+
+        &:hover {
+          color: $coloredText;
+        }
+
+        &:active {
+          transform: scale(0.8);
+          color: lighten($coloredText, 45%);
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 667px) {
+    display: none;
+  }
+}
+
+
+.contacts {
+  display: grid;
+  grid: 1fr / repeat(2, 1fr);
+  grid-gap: 30px;
+  align-items: center;
+
+  .contacts__phoneNo {
+    justify-self: end;
+
+    & .contacts__link {
+      font-family: FuturaBookC, Arial, sans-serif;
+      font-size: 0.875rem;
+      line-height: 1rem;
+      transition: 0.3s;
+      text-decoration: underline;
+      color: $coloredText;
+      @media only screen and (max-width: 667px) {
+        font-size: 0.75rem;
+        color: $whiteText;
+      }
+
+      &:hover {
+        color: lighten($coloredText, 10%);
+      }
+    }
+
+    @media only screen and (max-width: 1112px) {
+      display: none;
+    }
+
+    @media only screen and (max-width: 667px) {
+      display: block;
+    }
+  }
+
+  .contacts__callBtn {
+    width: 100%;
+    height: 37px;
+
+    @media only screen and (max-width: 1112px) {
+      justify-self: center;
+      width: 50%;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 1112px) {
+    grid: 1fr / 1fr;
+  }
+
+  @media only screen and (max-width: 667px) {
+    display: block;
+  }
+}
+
+.mainSection__content {
+  display: grid;
+  grid-row-gap: 40px;
+  align-content: center;
+  position: relative;
+  z-index: 0;
+  padding-left: 60px;
+  transition: 300ms;
+  outline: aqua 1px dashed;
+  background: url("../images/image1.png") no-repeat;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  @media only screen and (max-width: 1024px) {
+    background-position: -350px 0;
+  }
+
+  @media only screen and (max-width: 667px) {
+    background-position: -370px 0;
+    background-size: 1000px;
+  }
+}
+
+.instagramLinkSide {
+  height: 100%;
+  font-family: 'FuturaDemiC', Arial, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1rem;
+
+  .instagramLink__item {
+    display: inline-block;
+    position: relative;
+    margin-top: 360px;
+    transition: 300ms;
+    transform: rotate(90deg);
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $coloredText;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 51px;
+      height: 1.5px;
+      position: absolute;
+      top: 7px;
+      left: 100px;
+      background-color: $coloredText;
+    }
+
+    &:hover {
+      color: lighten($coloredText, 15%);
+    }
+
+    &:hover:before {
+      background-color: lighten($coloredText, 15%);
+    }
+
+    @media only screen and (max-width: 768px) {
+      margin-left: -15px;
+    }
+  }
+
+  @media only screen and (max-width: 667px) {
+    display: none;
+  }
+}
+
+.mainSection__title {
+  font-family: 'Yeseva One', 'Times New Roman', serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+  line-height: 3.3125rem;
+  z-index: 990;
+  margin: 0;
+  text-transform: uppercase;
+  color: $whiteText;
+}
+
+.mainSection__title_colored {
+  color: $coloredText;
+}
+
+.mainSection__infoText {
+  font-family: FuturaBookC, Arial, sans-serif;
+  font-size: 1.375rem;
+  margin: 0;
+  color: $whiteText;
+}
+
+.applicationForm {
+  display: grid;
+  grid: 1fr / 1fr 1fr;
+  grid-column-gap: 20px;
+  width: 33.5%;
+}
+
+.applicationForm__costCalcBtn, .applicationForm__submitBtn {
+  height: 51px;
+  font-size: 0.8125rem;
+}
+
+.scrollDownBtn {
+  display: grid;
+  grid: 1fr / 2fr 1fr;
+  grid-column-gap: 20px;
+  justify-items: center;
+  align-items: center;
+  width: 19%;
+  height: 97px;
+  position: absolute;
+  z-index: 999;
+  top: calc(-97px / 2);
+  left: 82px;
+  background-color: $backgroundColorPrimary;
+}
+
+.scrollDownBtn__text {
+  justify-self: end;
+  font-family: 'Yeseva One', Arial, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
+  text-transform: uppercase;
+  color: $whiteText;
+}
+
+.scrollDownBtn_aLink {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-self: left;
+  width: 29px;
+  height: 29px;
+  position: relative;
+  transition: 300ms;
+  border: 2px solid $coloredText;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: darken(rgba($primaryBtnColor, .5), 10%);
+    box-shadow: 0 5px 15px rgba(227, 184, 115, 0.3);
+  }
+}
+
+
+.sliderImage {
+  display: grid;
+  grid: 125px 5fr / 1fr;
+  width: 100%;
+  position: relative;
+  user-select: none;
+
+  .sliderImage__nextBtn {
+    display: block;
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    cursor: pointer;
+    transition: 300ms;
+    border-radius: 50%;
+    background-color: $coloredText;
+
+    svg {
+      position: absolute;
+      top: 35%;
+      left: 42%;
+    }
+
+    &:hover {
+      background: darken($coloredText, 10%);
+    }
+
+    &:active {
+      background-color: lighten($coloredText, 10%);
+    }
+  }
+
+  .sliderImage__navBlock {
+    align-self: center;
+    width: 70%;
+
+    .sliderImage__nav {
+      display: grid;
+      grid: 1fr / auto-flow;
+      justify-content: space-between;
+      padding: 0;
+    }
+
+    .sliderImage__item {
+      display: inline-block;
+
+
+      .sliderImage__link {
+        display: inline-block;
+        font-size: 0.875rem;
+        line-height: 1.1875rem;
+        position: relative;
+        transition: 300ms;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $transparentGrayText;
+
+        &:after {
+          content: '';
+          display: inline-block;
+          width: 100%;
+          height: 1px;
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          background-color: transparent;
+        }
+
+        &:hover {
+          color: $coloredText;
+        }
+
+        &:hover:after {
+
+          animation: bottomBorderAnimateLine ease 300ms;
+          background-color: $coloredText;
+        }
+      }
+    }
+  }
+
+  .sliderImage__images {
+    display: grid;
+    grid: 1fr / 81% 81%;
+    grid-column-gap: 20px;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+.portfolio__title {
+  grid-area: title;
+  font-family: "Yeseva One", "Times New Roman", serif;
+  font-size: 1.6875rem;
+  line-height: 2.3125rem;
+  position: relative;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: $coloredText;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 92px;
+    height: 2px;
+    position: absolute;
+    bottom: 30px;
+    left: 40%;
+    background-color: $coloredText;
+  }
+}
+
+.portfolio__Text {
+  grid-area: description;
+  font-family: 'FuturaBookC', Arial, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.8125rem;
+  margin: 0;
+  color: $whiteText;
+}
+
+.portfolioSpecs {
+  display: grid;
+  grid: minmax(85px, 100px) minmax(85px, 100px) / 1fr 1fr;
+  grid-area: specs;
+  margin: 0;
+
+  .portfolioSpecs__title {
+    font-family: 'Yeseva One', 'Times New Roman', serif;
+    font-size: 1.125rem;
+    line-height: 1.5625rem;
+    margin: 0;
+    text-transform: uppercase;
+    color: $coloredText;
+  }
+
+  .portfolioSpecs__content {
+    font-family: 'FuturaBookC', Arial, sans-serif;
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+    margin: 0;
+    color: $whiteText;
+  }
+}
+
+.portfolio__textSlider .sliderBtn {
+  grid-area: sliderBtn;
+  justify-self: left;
+  position: relative;
+  transform: translateX(65px);
+
+  ul {
+    display: inline-block;
+    height: 15px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sliderBtn__item {
+    display: inline-block;
+    width: 15px;
+    font-size: 70px;
+    line-height: 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 300ms;
+    text-align: center;
+    color: rgba($whiteText, 0.5);
+
+    &:hover {
+      color: $whiteText;
+    }
+  }
+
+  .sliderBtn__prev, .sliderBtn__next {
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    transition: 300ms;
+
+    &:hover {
+      filter: invert(0.26) sepia(1) saturate(11.7) hue-rotate(0deg) brightness(0.77);
+    }
+  }
+
+  .sliderBtn__prev {
+    left: -65px;
+  }
+
+  .sliderBtn__next {
+    right: -65px;
+  }
+}
+
+.broadcast {
+
+  .mainSection__title {
+    @include sectionTitle;
+
+    .mainSection__titleText {
+      @include sectionTitle__text($whiteText);
+    }
+
+    .mainSection__icon {
+      @include section__icon;
+      background: url("../images/Component2.svg") no-repeat;
+    }
+  }
+
+  .videoItem {
+    width: 60.17%;
+  }
+
+  .broadcast__description {
+    display: grid;
+    max-width: 681px;
+    min-height: 200px;
+    font-family: FuturaBookC, Arial, sans-serif;
+    font-size: 1.25rem;
+    line-height: 2.125rem;
+    position: relative;
+    margin-top: 70px;
+    text-align: center;
+    color: $primaryTextColor;
+
+    p {
+      align-self: center;
+      margin: 0;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      width: 55px;
+      height: 2px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $coloredText;
+    }
+  }
+
+  .broadcast__requestForm {
+    height: fit-content;
+
+    .requestForm {
+      display: grid;
+      grid: 1fr 1fr 60px / 1fr 1fr 1fr;
+      grid-template-areas: "name phone submit" "nameInp phoneInp submit" "chBox chBox chBox";
+      grid-column-gap: 58px;
+      padding-bottom: 30px;
+    }
+
+    .nameLabel {
+      grid-area: name;
+    }
+
+    .requestForm__nameInput {
+      grid-area: nameInp;
+    }
+
+    .phoneLabel {
+      grid-area: phone;
+    }
+
+    .requestForm__phoneInput {
+      grid-area: phoneInp;
+    }
+
+    .requestForm__submitBtn {
+      grid-area: submit;
+    }
+
+    .requestForm__nameInput, .requestForm__phoneInput {
+      display: block;
+      width: 231px;
+      height: 18px;
+      font-family: FuturaBookC, Arial, sans-serif;
+      font-size: 1.125rem;
+      line-height: 1.5rem;
+      padding-bottom: 5px;
+      color: $primaryTextColor;
+      border: none;
+      border-bottom: 1px solid $labelColor;
+
+      &::placeholder {
+        color: $primaryTextColor;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .phoneLabel, .nameLabel, .chBox {
+      font-family: FuturaBookC, Arial, sans-serif;
+      font-size: 0.9375rem;
+      line-height: 1.25rem;
+      color: $labelColor;
+    }
+
+    .chBox {
+      grid-area: chBox;
+      align-self: end;
+      justify-self: center;
+      transform: translateX(-15px);
+      color: $primaryTextColor;
+    }
+  }
+}
+
+.services {
+  .services__title {
+    @include sectionTitle;
+    height: fit-content;
+
+    .services__titleText {
+      @include sectionTitle__text($primaryTextColor);
+    }
+
+    .services__icon {
+      @include section__icon;
+      background: url("../images/repair-icon.svg") no-repeat;
+    }
+  }
+
+  .serviceCards {
+    display: grid;
+    grid: 1fr / 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    justify-content: center;
+
+    .serviceCards__item {
+      display: grid;
+      grid: 6.9fr 4.7fr 1.6fr / 1fr;
+      justify-items: center;
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+
+      .serviceCards__description {
+        width: 78%;
+        position: absolute;
+        bottom: 24%;
+        padding: 28px 0 45px 35px;
+        background: #FFFFFF;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+
+        .serviceCards__title {
+          font-family: 'Yeseva One', 'Times New Roman', serif;
+          font-size: 1.125rem;
+          margin: 0;
+          color: $primaryTextColor;
+        }
+
+        .serviceCards__features {
+          font-family: 'FuturaBookC', Arial, sans-serif;
+          font-size: .9375rem;
+          line-height: 1.5625rem;
+          padding-left: 15px;
+          color: $descriptionTxt;
+
+          li {
+            margin: 5px 0;
+          }
+        }
+
+        .serviceCards__priceTag {
+          width: 228px;
+          height: 54px;
+          font-family: 'Yeseva One', 'Times New Roman', serif;
+          font-size: 1.125rem;
+          line-height: 54px;
+          position: absolute;
+          bottom: -27px;
+          left: 0;
+          margin: 0;
+          padding: 0;
+          text-align: center;
+          box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+        }
+      }
+    }
+  }
+}
+
+.measurement__steps {
+  min-height: 725px;
+  position: relative;
+  z-index: 10;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 630px;
+    height: 630px;
+    position: absolute;
+    z-index: -1;
+    top: 8%;
+    left: -160px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    background: linear-gradient(#FFFFFF, #FFFFFF) padding-box,
+    linear-gradient(to right, #FFFFFF 0%, #FFFFFF 20%, #FFFFFF 20%, #E3B873 100%) border-box;
+  }
+
+  .measurement__Step {
+    width: 364px;
+    font-family: 'FuturaMediumC', Arial, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.3125rem;
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    color: $primaryTextColor;
+  }
+
+  .step1:before, .step2:before, .step3:before, .step4:before {
+    display: block;
+    width: 42px;
+    height: 42px;
+    font-family: 'Yeseva One', 'Times New Roman', serif;
+    font-size: 1.125rem;
+    line-height: 42px;
+    position: absolute;
+    left: -80px;
+    text-align: center;
+    color: $whiteText;
+    border: 15px #FFFFFF solid;
+    border-radius: 50%;
+    background: $primaryBtnColor;
+
+  }
+
+  .step1, .step2, .step3, .step4 {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .step1 {
+    top: 110px;
+    left: 400px;
+
+    &:before {
+      content: '01';
+      top: -15px;
+    }
+  }
+
+  .step2 {
+    top: 230px;
+    left: 490px;
+
+    &:before {
+      content: '02';
+      top: -25px;
+    }
+  }
+
+  .step3 {
+    top: 390px;
+    left: 518px;
+
+    &:before {
+      content: '03';
+      top: -25px;
+    }
+  }
+
+  .step4 {
+    top: 550px;
+    left: 455px;
+
+    &:before {
+      content: '04';
+      top: -20px;
+    }
+  }
+}
+
+.measurement__callForm {
+  background: #000000;
+}
+
+
+
+
+
+
+

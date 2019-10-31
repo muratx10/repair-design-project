@@ -1,0 +1,23 @@
+@mixin sectionTitle {
+  display: grid;
+  grid: 40px 40px / 100%;
+  justify-self: center;
+}
+
+@mixin sectionTitle__text($color) {
+  justify-self: center;
+  height: 50px;
+  font-family: 'Yeseva One', 'Times New Roman', serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin: 0;
+  text-transform: uppercase;
+  color: $color;
+}
+
+@mixin section__icon {
+  display: block;
+  justify-self: center;
+  width: 114px;
+  height: 28px;
+}

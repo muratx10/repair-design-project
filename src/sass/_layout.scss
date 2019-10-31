@@ -8,26 +8,72 @@ body {
 }
 
 .outerWrapper_header, .mainSectionWrapper {
+  overflow: hidden;
   background: $backgroundColorPrimary;
 }
 
 .innerWrapper_header, .mainSection {
   max-width: 1440px;
   margin: 0 auto;
-  //outline: aqua 1px solid;
-
 }
 
+.mainSection {
+  display: grid;
+  grid: 1fr / 82px 11fr;
+  width: 100%;
+  min-height: 707px;
+  transition: 300ms;
+  outline: aqua 1px dashed;
+  grid-auto-flow: dense;
+  @media only screen and(max-width: 768px) {
+    grid: 1fr / 50px 11fr;
+  }
+  @media only screen and (max-width: 667px) {
+    grid: 1fr / 1fr;
+    height: 690px;
+  }
+}
+
+.mainSection + .mainSection {
+  max-width: 1358px; //1440-82=1358px
+  position: relative;
+  padding-left: 82px;
+}
+
+
+
+.mainSectionWrapper:nth-child(2) {
+  background: linear-gradient(0deg, #FFFFFF, #FFFFFF 67.5%, #131313 0, #131313);
+}
+
+.mainSectionWrapper:nth-child(3) {
+  background: #FFFFFF;
+  outline: 1px dashed mediumvioletred;
+  .mainSection {
+    outline: 1px dashed mediumvioletred;
+    grid: 1fr / 1fr;
+    min-height: unset;
+    max-width: 1276px; //1440 - 82 - 82 = 1276px
+  }
+
+  //section where circle
+  .mainSection:nth-child(2) {
+    max-width: 1440px;
+    padding: 0;
+    overflow: hidden;
+  }
+}
+
+
 .header {
+  display: grid;
+  grid: 1fr /3fr 7fr 4fr;
   width: 90%;
   height: 40px;
   margin: 0 0 0 82px;
-  color: $whiteText;
-  display: grid;
-  grid: 1fr /3fr 7fr 4fr;
   padding: 22px 0;
   transition: 300ms;
-  //outline: red solid 1px;
+  color: $whiteText;
   @media only screen and (max-width: 1024px) {
     grid: 1fr / 3fr 9fr;
   }
@@ -43,48 +89,46 @@ body {
   }
 }
 
-.mainSection {
+.portfolio {
   display: grid;
-  grid: 1fr / 82px 11fr;
-  height: 800px;
+  grid: 1fr/ 4.52fr 8fr;
+  grid-column: 1 / span 2;
   width: 100%;
   outline: aqua 1px dashed;
-  transition: 300ms;
-  @media only screen and(max-width: 768px) {
-    grid: 1fr / 50px 11fr;
-  }
-  @media only screen and (max-width: 667px) {
-    grid: 1fr / 1fr;
-    height: 690px;
-  }
 }
 
-.mainSection__content {
-  outline: aqua 1px dashed;
-  background: url("../images/image1.png") no-repeat;
-  position: relative;
-  transition: 300ms;
-
-  &:after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-
-  @media only screen and (max-width: 1024px) {
-    background-position: -350px 0;
-  }
-
-  @media only screen and (max-width: 667px) {
-    background-size: 1000px;
-    background-position: -370px 0;
-  }
+.portfolio__textSlider {
+  display: grid;
+  grid: 95px .5fr .5fr 1fr .38fr/1fr;
+  grid-template-areas: "blank" "title" "description" "specs" "sliderBtn";
+  width: 85%;
+  margin: 0;
 }
+
+.broadcast {
+  display: grid;
+  grid: 85px minmax(200px, 460px) auto / 100%;
+  grid-column: 1 / span 12;
+  grid-row-gap: 20px;
+  justify-items: center;
+  background: linear-gradient(0deg, #FFFFFF, #FFFFFF 67.5%, #131313 0, #131313);
+  padding-bottom: 100px;
+}
+
+.services {
+  display: grid;
+  grid: .25fr 2fr / 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.measurement {
+  display: grid;
+  grid: 1fr / 6fr 4fr;
+}
+
+
+
 
 
 

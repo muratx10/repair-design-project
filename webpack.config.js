@@ -6,6 +6,7 @@ const conf = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
+        publicPath: '/dist'
     },
     devtool: 'source-map',
     devServer: {
@@ -37,7 +38,7 @@ const conf = {
                 ]
             },
             {
-                test: /\.(png|jpe?g|gif|svg)$/,
+                test: /\.(png|jpg|gif|svg)$/,
                 use: [
                     {
                         loader: 'file-loader',
