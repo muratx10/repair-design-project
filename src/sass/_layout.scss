@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -58,8 +59,8 @@ body {
 
   //section where circle
   .mainSection:nth-child(2) {
-    max-width: 1440px;
-    padding: 0;
+    max-width: 1358px;
+    padding: 0 82px 0 0;
     overflow: hidden;
   }
 }
@@ -125,6 +126,9 @@ body {
 .measurement {
   display: grid;
   grid: 1fr / 6fr 4fr;
+  align-items: center;
+  position: relative;
+  padding-bottom: 40px;
 }
 
 

@@ -141,3 +141,69 @@
   }
 
 }
+
+//request form
+.requestForm {
+  display: grid;
+  grid: 1fr 1fr 60px / 1fr 1fr 1fr;
+  grid-template-areas: "name phone submit" "nameInp phoneInp submit" "chBox chBox chBox";
+  grid-column-gap: 58px;
+  padding-bottom: 30px;
+}
+
+.nameLabel {
+  grid-area: name;
+}
+
+.requestForm__nameInput {
+  grid-area: nameInp;
+}
+
+.phoneLabel {
+  grid-area: phone;
+}
+
+.requestForm__phoneInput {
+  grid-area: phoneInp;
+}
+
+.requestForm__submitBtn {
+  grid-area: submit;
+}
+
+.requestForm__nameInput, .requestForm__phoneInput, .requestForm__emailInput {
+  display: block;
+  width: 231px;
+  height: 18px;
+  font-family: FuturaBookC, Arial, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  padding-bottom: 5px;
+  color: $primaryTextColor;
+  border: none;
+  border-bottom: 1px solid $labelColor;
+  background: none;
+
+  &::placeholder {
+    color: $primaryTextColor;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.phoneLabel, .nameLabel, .emailLabel, .chBox {
+  font-family: FuturaBookC, Arial, sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: $labelColor;
+}
+
+.chBox {
+  grid-area: chBox;
+  align-self: end;
+  justify-self: center;
+  transform: translateX(-15px);
+  color: $primaryTextColor;
+}

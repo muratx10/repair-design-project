@@ -378,20 +378,48 @@
 
                 </div>
                 <div class="measurement__callForm">
-                    <h4 class="callForm__title">Leave a request for free
+                    <h4 class="callForm__title">Leave a request for free <br>
                         departure of the measurer</h4>
-                    <form action="#" class="callForm">
-                        <label for="name">Name</label>
-                        <input id="name" type="text"
-                               placeholder="What is your name:">
-                        <label for="phone">Phone</label>
-                        <input id="phone" placeholder="Your phone number:">
-                        <label for="email">Email</label>
-                        <input type="text" id="email" placeholder="Your email:">
-                        <button></button>
-
+                    <form action="#" class="requestForm"
+                          id="measurementCallForm">
+                        <label class="nameLabel"
+                               for="name">Name</label>
+                        <input class="requestForm__nameInput" id="name"
+                               pattern="[A-Za-z]{1,32}"
+                               placeholder="What is your name:" required
+                               type="text">
+                        <label class="phoneLabel"
+                               for="phone">Phone</label>
+                        <input class="requestForm__phoneInput"
+                               id="phone"
+                               pattern="^\+375(17|29|33|44)[0-9]{3}[0-9]{2}[0-9]{2}$"
+                               placeholder="Your phone number:" required
+                               type="text">
+                        <label class="emailLabel"
+                               for="email">Email</label>
+                        <input class="requestForm__emailInput"
+                               id="email"
+                               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                               placeholder="Your email:" required
+                               type="text">
+                        <label class="chBox" for="chBox2">
+                            I agree to
+                            the
+                            processing of
+                            personal data
+                            <input class="chBox__item" id="chBox2"
+                                   type="checkbox">
+                            <span class="checkEmulate"></span>
+                        </label>
+                        <button class="requestForm__submitBtn submitBtn buttonShadow"
+                                form="measurementCallForm" type="submit"
+                                value="Submit">CALL THE MEASURER
+                        </button>
                     </form>
                 </div>
+                <p class="measurement__tip">
+                    Help save 10 - 20% of the <br> cost of materials
+                </p>
             </div>
         </div>
     </div>
