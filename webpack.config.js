@@ -1,5 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const conf = {
     entry: './src/scripts/app.js',
@@ -16,6 +17,15 @@ const conf = {
     mode: 'development',
     module: {
         rules: [
+            {
+                test: /\.(html)$/,
+                use: {
+                    loader: 'html-loader',
+                    options: {
+                        minimize: false,
+                    }
+                }
+            },
             {
                 test: /\.scss/,
                 use: [
@@ -65,6 +75,10 @@ const conf = {
         new MiniCssExtractPlugin({
             filename: "bundle.css",
             sourceMap: true
+        }),
+        new HtmlWebpackPlugin({
+            template: 'src/index.html',
+            minify: false
         }),
     ],
 

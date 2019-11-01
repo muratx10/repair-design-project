@@ -110,6 +110,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sass_main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_main_scss__WEBPACK_IMPORTED_MODULE_0__);
 
 
+const log = console.log;
+const submitBtn = document.querySelectorAll('.requestForm__submitBtn');
+
+
+//
+// submitBtn.forEach(item => {
+//     item.addEventListener('click', e => {
+//         log(e.target.closest('div').contains('label'));
+//     })
+// });
 
 
 /***/ })
