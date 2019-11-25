@@ -43,7 +43,7 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-@mixin underlineAnimationTxt($width, $bottomPos) {
+@mixin underlineAnimationTxt($width, $bottomPos, $colorTxt) {
   @keyframes bottomBorderAnimateLine {
     from {
       width: 0;
@@ -65,7 +65,7 @@
   }
 
   &:hover {
-    color: $coloredText;
+    color: $colorTxt;
   }
 
   &:hover:after {

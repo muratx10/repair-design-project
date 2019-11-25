@@ -51,6 +51,10 @@ body {
   background: linear-gradient(0deg, #131313, #131313 64.5%, #ffffff 0, #ffffff);
 }
 
+.mainSectionWrapper:nth-child(5) {
+  background: linear-gradient(0deg, #FFFFFF, #FFFFFF 69%, #131313 0, #131313);
+}
+
 .mainSectionWrapper:nth-child(3) {
   background: #FFFFFF;
   outline: 1px dashed mediumvioletred;

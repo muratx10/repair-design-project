@@ -336,7 +336,7 @@
         text-transform: uppercase;
         color: $transparentGrayText;
 
-        @include underlineAnimationTxt(100%, -10px);
+        @include underlineAnimationTxt(100%, -10px, $coloredText);
       }
     }
   }
@@ -519,13 +519,13 @@
   }
 
 }
-.serviceCards {
+.cardsContainer {
   display: grid;
   grid: 1fr / 1fr 1fr 1fr;
   grid-column-gap: 30px;
   justify-content: center;
 
-  .serviceCards__item {
+  .card {
     display: grid;
     grid: 6.9fr 4.7fr 1.6fr / 1fr;
     justify-items: center;
@@ -535,7 +535,7 @@
       width: 100%;
     }
 
-    .serviceCards__description {
+    .card__description {
       width: 78%;
       position: absolute;
       bottom: 24%;
@@ -543,14 +543,14 @@
       background: #FFFFFF;
       box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
 
-      .serviceCards__title {
+      .card__title {
         font-family: 'Yeseva One', 'Times New Roman', serif;
         font-size: 1.125rem;
         margin: 0;
         color: $primaryTextColor;
       }
 
-      .serviceCards__features {
+      .card__features {
         font-family: 'FuturaBookC', Arial, sans-serif;
         font-size: .9375rem;
         line-height: 1.5625rem;
@@ -562,7 +562,7 @@
         }
       }
 
-      .serviceCards__priceTag {
+      .card__Tag {
         width: 228px;
         height: 54px;
         font-family: 'Yeseva One', 'Times New Roman', serif;
@@ -789,7 +789,7 @@
         position: relative;
         width: max-content;
 
-        @include underlineAnimationTxt(100%, 2px);
+        @include underlineAnimationTxt(100%, 2px, $coloredText);
       }
     }
   }
@@ -858,7 +858,7 @@
     text-align: center;
   }
 
-  .serviceCards__description {
+  .card__description {
     top: 300px;
     height: fit-content;
   }
@@ -917,6 +917,177 @@
       width: 125%;
       align-self: end;
     }
+  }
+
+  .portfolio__title:after {
+    top: 50px;
+    height: 1px;
+  }
+
+  .features {
+    display: grid;
+    grid: 60px 60px / repeat(3, 140px);
+    grid-column-gap: 24%;
+    grid-row-gap: 24%;
+    padding-top: 70px;
+
+    a {
+      text-decoration: none;
+      color: $transparentGrayText;
+      font-family: FuturaBookC, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 18px;
+      transition: 300ms;
+    }
+
+    a:nth-child(1) {
+      font-family: 'Yeseva One', 'Times New Roman', serif;
+      font-size: 15px;
+      line-height: 21px;
+      border-bottom: 1px solid $coloredText;
+    }
+
+    .features__item {
+      a {
+        display: inline-block;
+        margin: 8px 0;
+      }
+      &:hover a {
+        color: $whiteText;
+      }
+    }
+  }
+}
+
+.teamWrapper {
+  padding-top: 100px;
+    .team__title {
+      @include sectionTitle;
+      height: fit-content;
+
+      .team__titleText {
+        @include sectionTitle__text($whiteText);
+      }
+
+      .team__icon {
+        @include section__icon;
+        background: url("../images/teamIcon.svg") no-repeat;
+      }
+    }
+
+    .team__description {
+      font-family: 'FuturaBookC', Arial, sans-serif;
+      font-size: 1.25rem;
+      line-height: 1.6875rem;
+      width: 100%;
+      justify-self: center;
+      text-align: center;
+      color: $whiteText;
+    }
+
+  .bottom {
+    padding-top: 130px;
+    color: $primaryTextColor;
+    position: relative;
+
+    &:after {
+      display: block;
+      content: '';
+      width: 55px;
+      height: 2px;
+      background: $coloredText;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .cardsContainer {
+    justify-items: center;
+    padding-top: 50px;
+    .card {
+      width: 275px;
+      position: relative;
+      grid: 1fr / 1fr;
+
+      .card__description {
+        width: 85%;
+        bottom: -10%;
+        padding-left: 0;
+        padding-top: 20px;
+      }
+
+      .card__title, .card__features {
+        font-size: 18px;
+        padding: 0;
+        text-align: center;
+      }
+
+      .card__title {
+        margin-bottom: 10px;
+      }
+
+      .card__icon {
+        width: 70px;
+        height: 70px;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        position: absolute;
+        top: -35px;
+        left: -35px;
+
+        img {
+          width: 50px;
+        }
+      }
+
+      .card__Tag {
+        width: 100%;
+        font-size: 13px;
+        line-height: 20px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+      }
+
+      .primaryBtnStyling {
+        cursor: auto;
+      }
+
+      .primaryBtnStyling:hover {
+        background-color: $primaryBtnColor;
+      }
+    }
+  }
+}
+
+.clients {
+  padding-top: 80px;
+
+  .clients__title {
+    @include sectionTitle;
+    height: fit-content;
+
+    .clients__titleText {
+      @include sectionTitle__text($primaryTextColor);
+    }
+
+    .clients__icon {
+      @include section__icon;
+      background: url("../images/clients.svg") no-repeat;
+    }
+  }
+
+  .clients__description {
+    font-family: 'FuturaBookC', Arial, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.6875rem;
+    width: 100%;
+    justify-self: center;
+    text-align: center;
+    color: $primaryTextColor;
   }
 }
 

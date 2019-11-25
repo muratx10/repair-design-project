@@ -43,7 +43,7 @@ const conf = {
                         loader: 'sass-loader',
                         options: {
                             implementation: require('sass'),
-                            sourceMap: true
+                            sourceMap: true,
                         }
                     }
                 ]
