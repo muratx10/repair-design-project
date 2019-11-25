@@ -9,12 +9,10 @@ const conf = {
         filename: 'bundle.js',
         //publicPath: '/dist'
     },
-    devtool: 'source-map',
     devServer: {
         watchContentBase: true,
         overlay: true
     },
-    mode: 'development',
     module: {
         rules: [
             {
@@ -22,7 +20,7 @@ const conf = {
                 use: {
                     loader: 'html-loader',
                     options: {
-                        minimize: false,
+                        minimize: true,
                     }
                 }
             },
@@ -33,7 +31,10 @@ const conf = {
                         loader: MiniCssExtractPlugin.loader
                     },
                     {
-                        loader: 'css-loader'
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true,
+                        }
                     },
                     {
                         loader: 'postcss-loader'
@@ -74,14 +75,26 @@ const conf = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: "bundle.css",
-            sourceMap: true
+            sourceMap: true,
         }),
         new HtmlWebpackPlugin({
             template: 'src/index.html',
-            minify: false
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true,
+                removeRedundantAttributes: true,
+                removeScriptTypeAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                useShortDoctype: true,
+            },
         }),
     ],
 
 };
 
-module.exports = conf;
+module.exports = (env, options) => {
+    conf.devtool = options.mode === 'production'
+        ? false
+        : 'eval-source-map';
+    return conf;
+};

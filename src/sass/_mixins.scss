@@ -15,6 +15,15 @@
   color: $color;
 }
 
+@mixin subTitle() {
+  font-family: 'Yeseva One', 'Times New Roman', serif;
+  font-size: 1.125rem;
+  line-height: 1.5625rem;
+  margin: 0;
+  text-transform: uppercase;
+  color: $coloredText;
+}
+
 @mixin section__icon {
   display: block;
   justify-self: center;

@@ -4,7 +4,7 @@
   "description": "repair-design-project. Difficulty Level 3.",
   "main": "script.js",
   "scripts": {
-    "build": "webpack --conf webpack.config.js",
+    "build": "webpack --conf --mode production",
     "dev": "webpack-dev-server --mode development --open 'Google Chrome'"
   },
   "browserslist": [

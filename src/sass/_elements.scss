@@ -139,7 +139,7 @@
   padding-left: 60px;
   transition: 300ms;
   outline: aqua 1px dashed;
-  background: url("../images/image1.png") no-repeat;
+  background: url("../images/image1.jpg") no-repeat;
 
   &:after {
     @include darkenBg;
@@ -388,12 +388,7 @@
   margin: 0;
 
   .portfolioSpecs__title {
-    font-family: 'Yeseva One', 'Times New Roman', serif;
-    font-size: 1.125rem;
-    line-height: 1.5625rem;
-    margin: 0;
-    text-transform: uppercase;
-    color: $coloredText;
+    @include subTitle();
   }
 
   .portfolioSpecs__content {
@@ -405,7 +400,7 @@
   }
 }
 
-.portfolio__textSlider .sliderBtn {
+.sliderBtn {
   grid-area: sliderBtn;
   justify-self: left;
   position: relative;
@@ -523,63 +518,63 @@
     }
   }
 
-  .serviceCards {
+}
+.serviceCards {
+  display: grid;
+  grid: 1fr / 1fr 1fr 1fr;
+  grid-column-gap: 30px;
+  justify-content: center;
+
+  .serviceCards__item {
     display: grid;
-    grid: 1fr / 1fr 1fr 1fr;
-    grid-column-gap: 30px;
-    justify-content: center;
+    grid: 6.9fr 4.7fr 1.6fr / 1fr;
+    justify-items: center;
+    position: relative;
 
-    .serviceCards__item {
-      display: grid;
-      grid: 6.9fr 4.7fr 1.6fr / 1fr;
-      justify-items: center;
-      position: relative;
+    img {
+      width: 100%;
+    }
 
-      img {
-        width: 100%;
+    .serviceCards__description {
+      width: 78%;
+      position: absolute;
+      bottom: 24%;
+      padding: 28px 0 45px 35px;
+      background: #FFFFFF;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+
+      .serviceCards__title {
+        font-family: 'Yeseva One', 'Times New Roman', serif;
+        font-size: 1.125rem;
+        margin: 0;
+        color: $primaryTextColor;
       }
 
-      .serviceCards__description {
-        width: 78%;
+      .serviceCards__features {
+        font-family: 'FuturaBookC', Arial, sans-serif;
+        font-size: .9375rem;
+        line-height: 1.5625rem;
+        padding-left: 15px;
+        color: $descriptionTxt;
+
+        li {
+          margin: 5px 0;
+        }
+      }
+
+      .serviceCards__priceTag {
+        width: 228px;
+        height: 54px;
+        font-family: 'Yeseva One', 'Times New Roman', serif;
+        font-size: 1.125rem;
+        line-height: 54px;
         position: absolute;
-        bottom: 24%;
-        padding: 28px 0 45px 35px;
-        background: #FFFFFF;
-        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
-
-        .serviceCards__title {
-          font-family: 'Yeseva One', 'Times New Roman', serif;
-          font-size: 1.125rem;
-          margin: 0;
-          color: $primaryTextColor;
-        }
-
-        .serviceCards__features {
-          font-family: 'FuturaBookC', Arial, sans-serif;
-          font-size: .9375rem;
-          line-height: 1.5625rem;
-          padding-left: 15px;
-          color: $descriptionTxt;
-
-          li {
-            margin: 5px 0;
-          }
-        }
-
-        .serviceCards__priceTag {
-          width: 228px;
-          height: 54px;
-          font-family: 'Yeseva One', 'Times New Roman', serif;
-          font-size: 1.125rem;
-          line-height: 54px;
-          position: absolute;
-          bottom: -27px;
-          left: 0;
-          margin: 0;
-          padding: 0;
-          text-align: center;
-          box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
-        }
+        bottom: -27px;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
       }
     }
   }
@@ -771,10 +766,15 @@
     line-height: 2.3125rem;
     text-transform: uppercase;
     color: $coloredText;
+    justify-self: left;
+    align-self: center;
+    padding-left: 20px;
+    padding-top: 100px;
   }
 
   .repairStyles__itemsContainer {
     grid-area: styleItems;
+    padding-left: 20px;
 
     .repairStyles__item {
       display: block;
@@ -792,12 +792,133 @@
         @include underlineAnimationTxt(100%, 2px);
       }
     }
-
   }
 }
 
+.imageContainer__firstCol {
+  position: relative;
+  top: -40px;
+  .imageContainer__image:nth-child(1) {
+    background: url("../images/interior1.jpg");
+    display: block;
+    width: 355px;
+    height: 555px;
+    margin-bottom: 40px;
+  }
+  .imageContainer__image:nth-child(2) {
+    background: url("../images/interior_2.jpg");
+    display: block;
+    width: 355px;
+    height: 350px;
+  }
+}
 
+.imageContainer__secondCol {
+  position: relative;
+  top: -110px;
 
+  .imageContainer__image:nth-child(1){
+    background: url("../images/interior3.jpg");
+    display: block;
+    width: 355px;
+    height: 275px;
+    margin-bottom: 40px;
+  }
+  .imageContainer__image:nth-child(2) {
+    background: url("../images/interior4.jpg");
+    display: block;
+    width: 355px;
+    height: 625px;
+  }
+
+}
+
+.designProject {
+  margin-bottom: -70px;
+  .designProject__title {
+    @include sectionTitle;
+    height: fit-content;
+
+    .designProject__titleText {
+      @include sectionTitle__text($primaryTextColor);
+    }
+
+    .designProject__icon {
+      @include section__icon;
+      background: url("../images/designProject.svg") no-repeat;
+    }
+  }
+
+  .designProject__description {
+    font-family: 'FuturaBookC', Arial, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.6875rem;
+    width: 100%;
+    justify-self: center;
+    text-align: center;
+  }
+
+  .serviceCards__description {
+    top: 300px;
+    height: fit-content;
+  }
+}
+
+.design{
+
+  .portfolio__title {
+    position: relative;
+    &:after {
+      top: 40%;
+    }
+    &:before {
+      content: 'HOW WE ARE WORKING';
+      display: block;
+      position: absolute;
+      top: -50px;
+      font-size: 15px;
+      color: $whiteText;
+      font-family: FuturaDemiC, Arial, sans-serif;
+      line-height: 21px;
+    }
+  }
+  .portfolio__textSlider {
+    grid: 1fr 1.5fr 3fr 1fr /1fr;
+    grid-template-areas: "title"
+                          "subtitle"
+                          "description"
+                          "sliderBtn";
+  }
+
+  .portfolio__subtitle {
+    position: relative;
+    align-self: end;
+    @include subTitle();
+    grid-area: subtitle;
+    &:before {
+      content: "1/6";
+      display: block;
+      position: absolute;
+      top: -50px;
+      color: $whiteText;
+      font-size: 15px;
+      font-family: FuturaDemiC, Arial, sans-serif;
+      line-height: 21px;
+    }
+  }
+  .portfolio__Text {
+    padding-top: 20px;
+  }
+
+  .sliderImage {
+    grid: 5.5fr 10fr / 1fr;
+    //background: rgba(201, 235, 52, 0.5);
+    img {
+      width: 125%;
+      align-self: end;
+    }
+  }
+}
 
 
 
