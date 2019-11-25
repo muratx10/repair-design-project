@@ -9,7 +9,7 @@
     text-align: left;
 
     .logo__link {
-      font-family: 'FuturaDemiC', Arial, sans-serif;
+      font-family: "FuturaDemiC", Arial, sans-serif;
       font-size: 0.875rem;
       line-height: 1rem;
       text-decoration: none;
@@ -23,7 +23,6 @@
 
   @media only screen and (max-width: 667px) {
     display: block;
-
   }
 }
 
@@ -70,7 +69,6 @@
     display: none;
   }
 }
-
 
 .contacts {
   display: grid;
@@ -157,7 +155,7 @@
 
 .instagramLinkSide {
   height: 100%;
-  font-family: 'FuturaDemiC', Arial, sans-serif;
+  font-family: "FuturaDemiC", Arial, sans-serif;
   font-size: 0.875rem;
   line-height: 1rem;
 
@@ -172,7 +170,7 @@
     color: $coloredText;
 
     &:before {
-      content: '';
+      content: "";
       display: block;
       width: 51px;
       height: 1.5px;
@@ -201,7 +199,7 @@
 }
 
 .mainSection__title {
-  font-family: 'Yeseva One', 'Times New Roman', serif;
+  font-family: "Yeseva One", "Times New Roman", serif;
   font-size: 2.5rem;
   font-weight: normal;
   line-height: 3.3125rem;
@@ -229,7 +227,8 @@
   width: 33.5%;
 }
 
-.applicationForm__costCalcBtn, .applicationForm__submitBtn {
+.applicationForm__costCalcBtn,
+.applicationForm__submitBtn {
   height: 51px;
   font-size: 0.8125rem;
 }
@@ -251,7 +250,7 @@
 
 .scrollDownBtn__text {
   justify-self: end;
-  font-family: 'Yeseva One', Arial, sans-serif;
+  font-family: "Yeseva One", Arial, sans-serif;
   font-size: 0.875rem;
   line-height: 1.1875rem;
   text-transform: uppercase;
@@ -271,11 +270,10 @@
   border-radius: 50%;
 
   &:hover {
-    background-color: darken(rgba($primaryBtnColor, .5), 10%);
+    background-color: darken(rgba($primaryBtnColor, 0.5), 10%);
     box-shadow: 0 5px 15px rgba(227, 184, 115, 0.3);
   }
 }
-
 
 .sliderImage {
   display: grid;
@@ -325,7 +323,6 @@
     .sliderImage__item {
       display: inline-block;
 
-
       .sliderImage__link {
         display: inline-block;
         font-size: 0.875rem;
@@ -361,7 +358,7 @@
   color: $coloredText;
 
   &:after {
-    content: '';
+    content: "";
     display: inline-block;
     width: 92px;
     height: 2px;
@@ -374,7 +371,7 @@
 
 .portfolio__Text {
   grid-area: description;
-  font-family: 'FuturaBookC', Arial, sans-serif;
+  font-family: "FuturaBookC", Arial, sans-serif;
   font-size: 1.125rem;
   line-height: 1.8125rem;
   margin: 0;
@@ -392,7 +389,7 @@
   }
 
   .portfolioSpecs__content {
-    font-family: 'FuturaBookC', Arial, sans-serif;
+    font-family: "FuturaBookC", Arial, sans-serif;
     font-size: 0.9375rem;
     line-height: 1.25rem;
     margin: 0;
@@ -429,14 +426,16 @@
     }
   }
 
-  .sliderBtn__prev, .sliderBtn__next {
+  .sliderBtn__prev,
+  .sliderBtn__next {
     position: absolute;
     top: 0;
     cursor: pointer;
     transition: 300ms;
 
     &:hover {
-      filter: invert(0.26) sepia(1) saturate(11.7) hue-rotate(0deg) brightness(0.77);
+      filter: invert(0.26) sepia(1) saturate(11.7) hue-rotate(0deg)
+        brightness(0.77);
     }
   }
 
@@ -450,7 +449,6 @@
 }
 
 .broadcast {
-
   .mainSection__title {
     @include sectionTitle;
 
@@ -486,7 +484,7 @@
     }
 
     &:before {
-      content: '';
+      content: "";
       display: block;
       width: 55px;
       height: 2px;
@@ -517,7 +515,6 @@
       background: url("../images/repair-icon.svg") no-repeat;
     }
   }
-
 }
 .cardsContainer {
   display: grid;
@@ -540,19 +537,19 @@
       position: absolute;
       bottom: 24%;
       padding: 28px 0 45px 35px;
-      background: #FFFFFF;
+      background: #ffffff;
       box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
 
       .card__title {
-        font-family: 'Yeseva One', 'Times New Roman', serif;
+        font-family: "Yeseva One", "Times New Roman", serif;
         font-size: 1.125rem;
         margin: 0;
         color: $primaryTextColor;
       }
 
       .card__features {
-        font-family: 'FuturaBookC', Arial, sans-serif;
-        font-size: .9375rem;
+        font-family: "FuturaBookC", Arial, sans-serif;
+        font-size: 0.9375rem;
         line-height: 1.5625rem;
         padding-left: 15px;
         color: $descriptionTxt;
@@ -565,7 +562,7 @@
       .card__Tag {
         width: 228px;
         height: 54px;
-        font-family: 'Yeseva One', 'Times New Roman', serif;
+        font-family: "Yeseva One", "Times New Roman", serif;
         font-size: 1.125rem;
         line-height: 54px;
         position: absolute;
@@ -586,7 +583,7 @@
   z-index: 10;
 
   &:after {
-    content: '';
+    content: "";
     display: block;
     width: 630px;
     height: 630px;
@@ -596,13 +593,20 @@
     left: -160px;
     border: 3px solid transparent;
     border-radius: 50%;
-    background: linear-gradient(#FFFFFF, #FFFFFF) padding-box,
-    linear-gradient(to right, #FFFFFF 0%, #FFFFFF 20%, #FFFFFF 20%, #E3B873 100%) border-box;
+    background: linear-gradient(#ffffff, #ffffff) padding-box,
+      linear-gradient(
+          to right,
+          #ffffff 0%,
+          #ffffff 20%,
+          #ffffff 20%,
+          #e3b873 100%
+        )
+        border-box;
   }
 
   .measurement__Step {
     width: 364px;
-    font-family: 'FuturaMediumC', Arial, sans-serif;
+    font-family: "FuturaMediumC", Arial, sans-serif;
     font-size: 1.125rem;
     line-height: 1.3125rem;
     position: relative;
@@ -612,24 +616,29 @@
     color: $primaryTextColor;
   }
 
-  .step1:before, .step2:before, .step3:before, .step4:before {
+  .step1:before,
+  .step2:before,
+  .step3:before,
+  .step4:before {
     display: block;
     width: 42px;
     height: 42px;
-    font-family: 'Yeseva One', 'Times New Roman', serif;
+    font-family: "Yeseva One", "Times New Roman", serif;
     font-size: 1.125rem;
     line-height: 42px;
     position: absolute;
     left: -80px;
     text-align: center;
     color: $whiteText;
-    border: 15px #FFFFFF solid;
+    border: 15px #ffffff solid;
     border-radius: 50%;
     background: $primaryBtnColor;
-
   }
 
-  .step1, .step2, .step3, .step4 {
+  .step1,
+  .step2,
+  .step3,
+  .step4 {
     position: absolute;
     z-index: 1;
   }
@@ -639,7 +648,7 @@
     left: 400px;
 
     &:before {
-      content: '01';
+      content: "01";
       top: -15px;
     }
   }
@@ -649,7 +658,7 @@
     left: 490px;
 
     &:before {
-      content: '02';
+      content: "02";
       top: -25px;
     }
   }
@@ -659,7 +668,7 @@
     left: 518px;
 
     &:before {
-      content: '03';
+      content: "03";
       top: -25px;
     }
   }
@@ -669,7 +678,7 @@
     left: 455px;
 
     &:before {
-      content: '04';
+      content: "04";
       top: -20px;
     }
   }
@@ -683,7 +692,7 @@
   background: $backgroundColorPrimary;
 
   .callForm__title {
-    font-family: 'FuturaDemiC', Arial, sans-serif;
+    font-family: "FuturaDemiC", Arial, sans-serif;
     font-size: 1.25rem;
     line-height: 1.5625rem;
     margin-bottom: 45px;
@@ -693,7 +702,6 @@
 
   label {
     color: lighten($labelColor, 70%);
-
   }
 
   .requestForm {
@@ -713,7 +721,9 @@
       margin-top: 40px;
     }
 
-    .requestForm__nameInput, .requestForm__phoneInput, .requestForm__emailInput {
+    .requestForm__nameInput,
+    .requestForm__phoneInput,
+    .requestForm__emailInput {
       width: 100%;
       margin-bottom: 50px;
       color: $whiteText;
@@ -731,7 +741,7 @@
 }
 
 .measurement__tip {
-  font-family: 'FuturaDemiC', Arial, sans-serif;
+  font-family: "FuturaDemiC", Arial, sans-serif;
   font-size: 1.25rem;
   line-height: 1.5625rem;
   position: absolute;
@@ -761,7 +771,7 @@
 .repairStyles {
   .repairStyles__title {
     grid-area: title;
-    font-family: 'Yeseva One', 'Times New Roman', serif;
+    font-family: "Yeseva One", "Times New Roman", serif;
     font-size: 1.6875rem;
     line-height: 2.3125rem;
     text-transform: uppercase;
@@ -781,7 +791,7 @@
 
       .link {
         text-decoration: none;
-        font-family: 'Proxima Nova Regular', Arial, sans-serif;
+        font-family: "Proxima Nova Regular", Arial, sans-serif;
         font-size: 1.25rem;
         line-height: 2.125rem;
         color: $whiteText;
@@ -817,7 +827,7 @@
   position: relative;
   top: -110px;
 
-  .imageContainer__image:nth-child(1){
+  .imageContainer__image:nth-child(1) {
     background: url("../images/interior3.jpg");
     display: block;
     width: 355px;
@@ -830,7 +840,6 @@
     width: 355px;
     height: 625px;
   }
-
 }
 
 .designProject {
@@ -850,7 +859,7 @@
   }
 
   .designProject__description {
-    font-family: 'FuturaBookC', Arial, sans-serif;
+    font-family: "FuturaBookC", Arial, sans-serif;
     font-size: 1.25rem;
     line-height: 1.6875rem;
     width: 100%;
@@ -864,15 +873,14 @@
   }
 }
 
-.design{
-
+.design {
   .portfolio__title {
     position: relative;
     &:after {
       top: 40%;
     }
     &:before {
-      content: 'HOW WE ARE WORKING';
+      content: "HOW WE ARE WORKING";
       display: block;
       position: absolute;
       top: -50px;
@@ -884,10 +892,11 @@
   }
   .portfolio__textSlider {
     grid: 1fr 1.5fr 3fr 1fr /1fr;
-    grid-template-areas: "title"
-                          "subtitle"
-                          "description"
-                          "sliderBtn";
+    grid-template-areas:
+      "title"
+      "subtitle"
+      "description"
+      "sliderBtn";
   }
 
   .portfolio__subtitle {
@@ -941,7 +950,7 @@
     }
 
     a:nth-child(1) {
-      font-family: 'Yeseva One', 'Times New Roman', serif;
+      font-family: "Yeseva One", "Times New Roman", serif;
       font-size: 15px;
       line-height: 21px;
       border-bottom: 1px solid $coloredText;
@@ -961,29 +970,29 @@
 
 .teamWrapper {
   padding-top: 100px;
-    .team__title {
-      @include sectionTitle;
-      height: fit-content;
+  .team__title {
+    @include sectionTitle;
+    height: fit-content;
 
-      .team__titleText {
-        @include sectionTitle__text($whiteText);
-      }
-
-      .team__icon {
-        @include section__icon;
-        background: url("../images/teamIcon.svg") no-repeat;
-      }
+    .team__titleText {
+      @include sectionTitle__text($whiteText);
     }
 
-    .team__description {
-      font-family: 'FuturaBookC', Arial, sans-serif;
-      font-size: 1.25rem;
-      line-height: 1.6875rem;
-      width: 100%;
-      justify-self: center;
-      text-align: center;
-      color: $whiteText;
+    .team__icon {
+      @include section__icon;
+      background: url("../images/teamIcon.svg") no-repeat;
     }
+  }
+
+  .team__description {
+    font-family: "FuturaBookC", Arial, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.6875rem;
+    width: 100%;
+    justify-self: center;
+    text-align: center;
+    color: $whiteText;
+  }
 
   .bottom {
     padding-top: 130px;
@@ -992,7 +1001,7 @@
 
     &:after {
       display: block;
-      content: '';
+      content: "";
       width: 55px;
       height: 2px;
       background: $coloredText;
@@ -1018,7 +1027,8 @@
         padding-top: 20px;
       }
 
-      .card__title, .card__features {
+      .card__title,
+      .card__features {
         font-size: 18px;
         padding: 0;
         text-align: center;
@@ -1081,7 +1091,7 @@
   }
 
   .clients__description {
-    font-family: 'FuturaBookC', Arial, sans-serif;
+    font-family: "FuturaBookC", Arial, sans-serif;
     font-size: 1.25rem;
     line-height: 1.6875rem;
     width: 100%;
@@ -1090,6 +1100,3 @@
     color: $primaryTextColor;
   }
 }
-
-
-
