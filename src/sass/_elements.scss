@@ -32,14 +32,14 @@
 
   .navMenu__menuItemsBlock {
     display: grid;
-    grid: 1fr / repeat(6, 1fr);
     margin: 0;
     padding: 0;
+    grid: 1fr / repeat(6, 1fr);
 
     .navMenu__menuItem {
-      display: inline-block;
       font-family: FuturaBookC, Arial, sans-serif;
       font-size: 0.875rem;
+      display: inline-block;
       text-align: center;
       text-transform: uppercase;
 
@@ -72,9 +72,9 @@
 
 .contacts {
   display: grid;
+  align-items: center;
   grid: 1fr / repeat(2, 1fr);
   grid-gap: 30px;
-  align-items: center;
 
   .contacts__phoneNo {
     justify-self: end;
@@ -110,8 +110,8 @@
     height: 37px;
 
     @media only screen and (max-width: 1112px) {
-      justify-self: center;
       width: 50%;
+      justify-self: center;
     }
 
     @media only screen and (max-width: 1024px) {
@@ -129,15 +129,15 @@
 }
 
 .mainSection__content {
-  display: grid;
-  grid-row-gap: 40px;
-  align-content: center;
   position: relative;
   z-index: 0;
+  display: grid;
+  align-content: center;
   padding-left: 60px;
   transition: 300ms;
   outline: aqua 1px dashed;
   background: url("../images/image1.jpg") no-repeat;
+  grid-row-gap: 40px;
 
   &:after {
     @include darkenBg;
@@ -154,14 +154,14 @@
 }
 
 .instagramLinkSide {
-  height: 100%;
   font-family: "FuturaDemiC", Arial, sans-serif;
   font-size: 0.875rem;
   line-height: 1rem;
+  height: 100%;
 
   .instagramLink__item {
-    display: inline-block;
     position: relative;
+    display: inline-block;
     margin-top: 360px;
     transition: 300ms;
     transform: rotate(90deg);
@@ -170,13 +170,13 @@
     color: $coloredText;
 
     &:before {
-      content: "";
-      display: block;
-      width: 51px;
-      height: 1.5px;
       position: absolute;
       top: 7px;
       left: 100px;
+      display: block;
+      width: 51px;
+      height: 1.5px;
+      content: "";
       background-color: $coloredText;
     }
 
@@ -222,52 +222,52 @@
 
 .applicationForm {
   display: grid;
+  width: 33.5%;
   grid: 1fr / 1fr 1fr;
   grid-column-gap: 20px;
-  width: 33.5%;
 }
 
 .applicationForm__costCalcBtn,
 .applicationForm__submitBtn {
-  height: 51px;
   font-size: 0.8125rem;
+  height: 51px;
 }
 
 .scrollDownBtn {
-  display: grid;
-  grid: 1fr / 2fr 1fr;
-  grid-column-gap: 20px;
-  justify-items: center;
-  align-items: center;
-  width: 19%;
-  height: 97px;
   position: absolute;
   z-index: 999;
   top: calc(-97px / 2);
   left: 82px;
+  display: grid;
+  align-items: center;
+  width: 19%;
+  height: 97px;
   background-color: $backgroundColorPrimary;
+  grid: 1fr / 2fr 1fr;
+  grid-column-gap: 20px;
+  justify-items: center;
 }
 
 .scrollDownBtn__text {
-  justify-self: end;
   font-family: "Yeseva One", Arial, sans-serif;
   font-size: 0.875rem;
   line-height: 1.1875rem;
   text-transform: uppercase;
   color: $whiteText;
+  justify-self: end;
 }
 
 .scrollDownBtn_aLink {
+  position: relative;
   display: grid;
-  justify-content: center;
   align-items: center;
-  justify-self: left;
+  justify-content: center;
   width: 29px;
   height: 29px;
-  position: relative;
   transition: 300ms;
   border: 2px solid $coloredText;
   border-radius: 50%;
+  justify-self: left;
 
   &:hover {
     background-color: darken(rgba($primaryBtnColor, 0.5), 10%);
@@ -276,19 +276,19 @@
 }
 
 .sliderImage {
-  display: grid;
-  grid: 125px 5fr / 1fr;
-  width: 100%;
   position: relative;
+  display: grid;
+  width: 100%;
   user-select: none;
+  grid: 125px 5fr / 1fr;
 
   .sliderImage__nextBtn {
-    display: block;
-    width: 55px;
-    height: 55px;
     position: absolute;
     top: 50%;
     right: 5%;
+    display: block;
+    width: 55px;
+    height: 55px;
     cursor: pointer;
     transition: 300ms;
     border-radius: 50%;
@@ -315,19 +315,19 @@
 
     .sliderImage__nav {
       display: grid;
-      grid: 1fr / auto-flow;
       justify-content: space-between;
       padding: 0;
+      grid: 1fr / auto-flow;
     }
 
     .sliderImage__item {
       display: inline-block;
 
       .sliderImage__link {
-        display: inline-block;
         font-size: 0.875rem;
         line-height: 1.1875rem;
         position: relative;
+        display: inline-block;
         transition: 300ms;
         text-decoration: none;
         text-transform: uppercase;
@@ -340,15 +340,14 @@
 
   .sliderImage__images {
     display: grid;
+    overflow: hidden;
+    width: 100%;
     grid: 1fr / 81% 81%;
     grid-column-gap: 20px;
-    width: 100%;
-    overflow: hidden;
   }
 }
 
 .portfolio__title {
-  grid-area: title;
   font-family: "Yeseva One", "Times New Roman", serif;
   font-size: 1.6875rem;
   line-height: 2.3125rem;
@@ -356,33 +355,34 @@
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: $coloredText;
+  grid-area: title;
 
   &:after {
-    content: "";
-    display: inline-block;
-    width: 92px;
-    height: 2px;
     position: absolute;
     bottom: 30px;
     left: 40%;
+    display: inline-block;
+    width: 92px;
+    height: 2px;
+    content: "";
     background-color: $coloredText;
   }
 }
 
 .portfolio__Text {
-  grid-area: description;
   font-family: "FuturaBookC", Arial, sans-serif;
   font-size: 1.125rem;
   line-height: 1.8125rem;
   margin: 0;
   color: $whiteText;
+  grid-area: description;
 }
 
 .portfolioSpecs {
   display: grid;
+  margin: 0;
   grid: minmax(85px, 100px) minmax(85px, 100px) / 1fr 1fr;
   grid-area: specs;
-  margin: 0;
 
   .portfolioSpecs__title {
     @include subTitle();
@@ -398,10 +398,10 @@
 }
 
 .sliderBtn {
-  grid-area: sliderBtn;
-  justify-self: left;
   position: relative;
   transform: translateX(65px);
+  grid-area: sliderBtn;
+  justify-self: left;
 
   ul {
     display: inline-block;
@@ -411,10 +411,10 @@
   }
 
   .sliderBtn__item {
-    display: inline-block;
-    width: 15px;
     font-size: 70px;
     line-height: 15px;
+    display: inline-block;
+    width: 15px;
     margin: 0 5px;
     cursor: pointer;
     transition: 300ms;
@@ -434,8 +434,7 @@
     transition: 300ms;
 
     &:hover {
-      filter: invert(0.26) sepia(1) saturate(11.7) hue-rotate(0deg)
-        brightness(0.77);
+      filter: invert(0.26) sepia(1) saturate(11.7) hue-rotate(0deg) brightness(0.77);
     }
   }
 
@@ -467,13 +466,13 @@
   }
 
   .broadcast__description {
-    display: grid;
-    max-width: 681px;
-    min-height: 200px;
     font-family: FuturaBookC, Arial, sans-serif;
     font-size: 1.25rem;
     line-height: 2.125rem;
     position: relative;
+    display: grid;
+    max-width: 681px;
+    min-height: 200px;
     margin-top: 70px;
     text-align: center;
     color: $primaryTextColor;
@@ -484,13 +483,13 @@
     }
 
     &:before {
-      content: "";
-      display: block;
-      width: 55px;
-      height: 2px;
       position: absolute;
       top: 0;
       left: 50%;
+      display: block;
+      width: 55px;
+      height: 2px;
+      content: "";
       transform: translateX(-50%);
       background-color: $coloredText;
     }
@@ -516,28 +515,29 @@
     }
   }
 }
+
 .cardsContainer {
   display: grid;
+  justify-content: center;
   grid: 1fr / 1fr 1fr 1fr;
   grid-column-gap: 30px;
-  justify-content: center;
 
   .card {
+    position: relative;
     display: grid;
     grid: 6.9fr 4.7fr 1.6fr / 1fr;
     justify-items: center;
-    position: relative;
 
     img {
       width: 100%;
     }
 
     .card__description {
-      width: 78%;
       position: absolute;
       bottom: 24%;
+      width: 78%;
       padding: 28px 0 45px 35px;
-      background: #ffffff;
+      background: #FFFFFF;
       box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
 
       .card__title {
@@ -560,14 +560,14 @@
       }
 
       .card__Tag {
-        width: 228px;
-        height: 54px;
         font-family: "Yeseva One", "Times New Roman", serif;
         font-size: 1.125rem;
         line-height: 54px;
         position: absolute;
         bottom: -27px;
         left: 0;
+        width: 228px;
+        height: 54px;
         margin: 0;
         padding: 0;
         text-align: center;
@@ -578,39 +578,38 @@
 }
 
 .measurement__steps {
-  min-height: 725px;
   position: relative;
   z-index: 10;
+  min-height: 725px;
 
   &:after {
-    content: "";
-    display: block;
-    width: 630px;
-    height: 630px;
     position: absolute;
     z-index: -1;
     top: 8%;
     left: -160px;
+    display: block;
+    width: 630px;
+    height: 630px;
+    content: "";
     border: 3px solid transparent;
     border-radius: 50%;
-    background: linear-gradient(#ffffff, #ffffff) padding-box,
-      linear-gradient(
-          to right,
-          #ffffff 0%,
-          #ffffff 20%,
-          #ffffff 20%,
-          #e3b873 100%
-        )
-        border-box;
+    background: linear-gradient(#FFFFFF, #FFFFFF) padding-box,
+    linear-gradient(
+                    to right,
+                    #FFFFFF 0%,
+                    #FFFFFF 20%,
+                    #FFFFFF 20%,
+                    #E3B873 100%
+    ) border-box;
   }
 
   .measurement__Step {
-    width: 364px;
     font-family: "FuturaMediumC", Arial, sans-serif;
     font-size: 1.125rem;
     line-height: 1.3125rem;
     position: relative;
     z-index: 2;
+    width: 364px;
     margin: 0;
     padding: 0;
     color: $primaryTextColor;
@@ -620,17 +619,17 @@
   .step2:before,
   .step3:before,
   .step4:before {
-    display: block;
-    width: 42px;
-    height: 42px;
     font-family: "Yeseva One", "Times New Roman", serif;
     font-size: 1.125rem;
     line-height: 42px;
     position: absolute;
     left: -80px;
+    display: block;
+    width: 42px;
+    height: 42px;
     text-align: center;
     color: $whiteText;
-    border: 15px #ffffff solid;
+    border: 15px #FFFFFF solid;
     border-radius: 50%;
     background: $primaryBtnColor;
   }
@@ -648,8 +647,8 @@
     left: 400px;
 
     &:before {
-      content: "01";
       top: -15px;
+      content: "01";
     }
   }
 
@@ -658,8 +657,8 @@
     left: 490px;
 
     &:before {
-      content: "02";
       top: -25px;
+      content: "02";
     }
   }
 
@@ -668,8 +667,8 @@
     left: 518px;
 
     &:before {
-      content: "03";
       top: -25px;
+      content: "03";
     }
   }
 
@@ -678,18 +677,18 @@
     left: 455px;
 
     &:before {
-      content: "04";
       top: -20px;
+      content: "04";
     }
   }
 }
 
 .measurement__callForm {
-  justify-self: right;
   width: 93%;
-  //max-width: 509px;
   height: 506px;
+  //max-width: 509px;
   background: $backgroundColorPrimary;
+  justify-self: right;
 
   .callForm__title {
     font-family: "FuturaDemiC", Arial, sans-serif;
@@ -705,8 +704,8 @@
   }
 
   .requestForm {
-    display: block;
     position: relative;
+    display: block;
     padding: 0 50px;
 
     .chBox {
@@ -754,14 +753,14 @@
   color: $coloredText;
 
   &:before {
-    content: url("../images/pigIcon.svg");
-    display: block;
-    width: 72px;
-    height: 72px;
     line-height: 100px;
     position: absolute;
     top: -13px;
     left: -100px;
+    display: block;
+    width: 72px;
+    height: 72px;
+    content: url("../images/pigIcon.svg");
     text-align: center;
     border-radius: 50%;
     background: $primaryBtnColor;
@@ -770,34 +769,34 @@
 
 .repairStyles {
   .repairStyles__title {
-    grid-area: title;
     font-family: "Yeseva One", "Times New Roman", serif;
     font-size: 1.6875rem;
     line-height: 2.3125rem;
+    align-self: center;
+    padding-top: 100px;
+    padding-left: 20px;
     text-transform: uppercase;
     color: $coloredText;
+    grid-area: title;
     justify-self: left;
-    align-self: center;
-    padding-left: 20px;
-    padding-top: 100px;
   }
 
   .repairStyles__itemsContainer {
-    grid-area: styleItems;
     padding-left: 20px;
+    grid-area: styleItems;
 
     .repairStyles__item {
       display: block;
 
       .link {
-        text-decoration: none;
         font-family: "Proxima Nova Regular", Arial, sans-serif;
         font-size: 1.25rem;
         line-height: 2.125rem;
-        color: $whiteText;
-        transition: 300ms;
         position: relative;
         width: max-content;
+        transition: 300ms;
+        text-decoration: none;
+        color: $whiteText;
 
         @include underlineAnimationTxt(100%, 2px, $coloredText);
       }
@@ -808,18 +807,20 @@
 .imageContainer__firstCol {
   position: relative;
   top: -40px;
+
   .imageContainer__image:nth-child(1) {
-    background: url("../images/interior1.jpg");
     display: block;
     width: 355px;
     height: 555px;
     margin-bottom: 40px;
+    background: url("../images/interior1.jpg");
   }
+
   .imageContainer__image:nth-child(2) {
-    background: url("../images/interior_2.jpg");
     display: block;
     width: 355px;
     height: 350px;
+    background: url("../images/interior_2.jpg");
   }
 }
 
@@ -828,22 +829,24 @@
   top: -110px;
 
   .imageContainer__image:nth-child(1) {
-    background: url("../images/interior3.jpg");
     display: block;
     width: 355px;
     height: 275px;
     margin-bottom: 40px;
+    background: url("../images/interior3.jpg");
   }
+
   .imageContainer__image:nth-child(2) {
-    background: url("../images/interior4.jpg");
     display: block;
     width: 355px;
     height: 625px;
+    background: url("../images/interior4.jpg");
   }
 }
 
 .designProject {
   margin-bottom: -70px;
+
   .designProject__title {
     @include sectionTitle;
     height: fit-content;
@@ -863,8 +866,8 @@
     font-size: 1.25rem;
     line-height: 1.6875rem;
     width: 100%;
-    justify-self: center;
     text-align: center;
+    justify-self: center;
   }
 
   .card__description {
@@ -876,27 +879,26 @@
 .design {
   .portfolio__title {
     position: relative;
+
     &:after {
       top: 40%;
     }
+
     &:before {
-      content: "HOW WE ARE WORKING";
-      display: block;
+      font-family: FuturaDemiC, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 21px;
       position: absolute;
       top: -50px;
-      font-size: 15px;
+      display: block;
+      content: "HOW WE ARE WORKING";
       color: $whiteText;
-      font-family: FuturaDemiC, Arial, sans-serif;
-      line-height: 21px;
     }
   }
+
   .portfolio__textSlider {
     grid: 1fr 1.5fr 3fr 1fr /1fr;
-    grid-template-areas:
-      "title"
-      "subtitle"
-      "description"
-      "sliderBtn";
+    grid-template-areas: "title" "subtitle" "description" "sliderBtn";
   }
 
   .portfolio__subtitle {
@@ -904,17 +906,19 @@
     align-self: end;
     @include subTitle();
     grid-area: subtitle;
+
     &:before {
-      content: "1/6";
-      display: block;
+      font-family: FuturaDemiC, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 21px;
       position: absolute;
       top: -50px;
+      display: block;
+      content: "1/6";
       color: $whiteText;
-      font-size: 15px;
-      font-family: FuturaDemiC, Arial, sans-serif;
-      line-height: 21px;
     }
   }
+
   .portfolio__Text {
     padding-top: 20px;
   }
@@ -923,8 +927,8 @@
     grid: 5.5fr 10fr / 1fr;
     //background: rgba(201, 235, 52, 0.5);
     img {
-      width: 125%;
       align-self: end;
+      width: 125%;
     }
   }
 
@@ -935,18 +939,18 @@
 
   .features {
     display: grid;
+    padding-top: 70px;
     grid: 60px 60px / repeat(3, 140px);
     grid-column-gap: 24%;
     grid-row-gap: 24%;
-    padding-top: 70px;
 
     a {
-      text-decoration: none;
-      color: $transparentGrayText;
       font-family: FuturaBookC, Arial, sans-serif;
       font-size: 15px;
       line-height: 18px;
       transition: 300ms;
+      text-decoration: none;
+      color: $transparentGrayText;
     }
 
     a:nth-child(1) {
@@ -961,6 +965,7 @@
         display: inline-block;
         margin: 8px 0;
       }
+
       &:hover a {
         color: $whiteText;
       }
@@ -970,6 +975,7 @@
 
 .teamWrapper {
   padding-top: 100px;
+
   .team__title {
     @include sectionTitle;
     height: fit-content;
@@ -989,42 +995,43 @@
     font-size: 1.25rem;
     line-height: 1.6875rem;
     width: 100%;
-    justify-self: center;
     text-align: center;
     color: $whiteText;
+    justify-self: center;
   }
 
   .bottom {
+    position: relative;
     padding-top: 130px;
     color: $primaryTextColor;
-    position: relative;
 
     &:after {
-      display: block;
-      content: "";
-      width: 55px;
-      height: 2px;
-      background: $coloredText;
       position: absolute;
       top: 40%;
       left: 50%;
+      display: block;
+      width: 55px;
+      height: 2px;
+      content: "";
       transform: translateX(-50%);
+      background: $coloredText;
     }
   }
 
   .cardsContainer {
-    justify-items: center;
     padding-top: 50px;
+    justify-items: center;
+
     .card {
-      width: 275px;
       position: relative;
+      width: 275px;
       grid: 1fr / 1fr;
 
       .card__description {
-        width: 85%;
         bottom: -10%;
-        padding-left: 0;
+        width: 85%;
         padding-top: 20px;
+        padding-left: 0;
       }
 
       .card__title,
@@ -1039,15 +1046,15 @@
       }
 
       .card__icon {
-        width: 70px;
-        height: 70px;
-        z-index: 10;
-        display: flex;
-        justify-content: center;
-        align-content: center;
         position: absolute;
+        z-index: 10;
         top: -35px;
         left: -35px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
 
         img {
           width: 50px;
@@ -1055,11 +1062,11 @@
       }
 
       .card__Tag {
-        width: 100%;
         font-size: 13px;
         line-height: 20px;
-        border-top-right-radius: 0;
+        width: 100%;
         border-top-left-radius: 0;
+        border-top-right-radius: 0;
       }
 
       .primaryBtnStyling {
@@ -1071,32 +1078,119 @@
       }
     }
   }
-}
 
-.clients {
-  padding-top: 80px;
+  .clients {
+    padding-top: 80px;
+    padding-bottom: 400px;
 
-  .clients__title {
-    @include sectionTitle;
-    height: fit-content;
+    .clients__title {
+      @include sectionTitle;
+      height: fit-content;
 
-    .clients__titleText {
-      @include sectionTitle__text($primaryTextColor);
+      .clients__titleText {
+        @include sectionTitle__text($primaryTextColor);
+      }
+
+      .clients__icon {
+        @include section__icon;
+        background: url("../images/clients.svg") no-repeat;
+      }
     }
 
-    .clients__icon {
-      @include section__icon;
-      background: url("../images/clients.svg") no-repeat;
+    .clients__description {
+      font-family: "FuturaBookC", Arial, sans-serif;
+      font-size: 1.25rem;
+      line-height: 1.6875rem;
+      width: 100%;
+      text-align: center;
+      color: $primaryTextColor;
+      justify-self: center;
+    }
+
+    .cardsContainer {
+      grid-column-gap: 70px;
+
+      .card {
+        position: relative;
+        display: grid;
+        width: 100%;
+        height: fit-content;
+        box-shadow: 0 10px 50px rgba(0, 0, 0, 0.04);
+        grid: .5fr 4fr / 1fr 4fr;
+        grid-template-areas: "pic name" "review review";
+        grid-column-gap: 20px;
+        justify-items: auto;
+
+        img {
+          width: 76px;
+          height: 76px;
+          border-radius: 50%;
+          grid-area: pic;
+          margin-left: 20px;
+        }
+
+        .card__title {
+          font-family: 'Yeseva One', 'Times New Roman', serif;
+          font-size: 18px;
+          line-height: 23px;
+          align-self: center;
+          width: 175px;
+          margin: 0;
+          padding: 0;
+          text-align: left;
+          justify-self: left;
+        }
+
+        .card__description {
+          position: static;
+          display: block;
+          width: 100%;
+          padding-bottom: 0;
+          grid-area: review;
+
+          .card__features {
+            font-family: FuturaBookC, Arial, sans-serif;
+            font-size: 15px;
+            line-height: 30px;
+            text-align: left;
+            word-spacing: 1px;
+
+            p {
+              margin: 10px 20px;
+            }
+          }
+
+          .cardTag__container {
+            position: static;
+            width: 100%;
+
+          }
+
+          .card__Tag {
+            font-size: 17px;
+            line-height: 54px;
+            position: static;
+            display: inline-block;
+            width: 40%;
+            height: 54px;
+            transform: translate(0, 27px);
+
+            img {
+              width: 32px;
+              height: 32px;
+              transform: translate(-45%, 30%);
+              border-radius: 0;
+            }
+          }
+
+          .card__Tag:nth-child(2) {
+            width: 50%;
+            border-left: #FFFFFF 1px solid;
+          }
+        }
+      }
     }
   }
-
-  .clients__description {
-    font-family: "FuturaBookC", Arial, sans-serif;
-    font-size: 1.25rem;
-    line-height: 1.6875rem;
-    width: 100%;
-    justify-self: center;
-    text-align: center;
-    color: $primaryTextColor;
-  }
 }
+
+
