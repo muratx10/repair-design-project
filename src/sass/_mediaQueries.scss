@@ -1,0 +1,76 @@
+@media only screen and (max-width: 1140px) {
+  .mainSection {
+    grid: 1fr / 1fr;
+  }
+
+  .mainSection+.mainSection {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0;
+  }
+
+  .instagramLinkSide {
+    display: none;
+  }
+
+  .portfolio {
+    grid: 1fr 1fr / 1fr;
+    width: 100%;
+    padding: 0;
+  }
+
+  .portfolio__title {
+    justify-self: center;
+    text-align: center;
+
+    &:after {
+      display: none;
+    }
+  }
+  .portfolio__Text {
+    width: 42%;
+    text-align: center;
+    justify-self: center;
+  }
+
+  .portfolio__textSlider {
+    width: 100%;
+  }
+
+  .sliderImage .sliderImage__images {
+    display: block;
+    height: fit-content;
+    padding: 0 20px;
+    overflow: unset;
+
+    img {
+      width: 95%;
+    }
+
+    img:nth-child(2) {
+      display: none;
+    }
+  }
+
+  .sliderImage__nextBtn {
+    top: 45%;
+  }
+
+  .portfolioSpecs {
+    justify-self: center;
+    grid-column-gap: 100px;
+  }
+
+  .scrollDownBtn {
+    display: none;
+  }
+
+  .sliderBtn {
+    display: none;
+  }
+
+  .sliderImage__navBlock {
+    display: none;
+  }
+
+}
