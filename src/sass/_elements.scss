@@ -282,9 +282,9 @@
   user-select: none;
   grid: 125px 5fr / 1fr;
 
-  .sliderImage__nextBtn {
+  .sliderImage__Btn {
     position: absolute;
-    top: 50%;
+    top: 45%;
     right: 5%;
     display: block;
     width: 55px;
@@ -307,6 +307,12 @@
     &:active {
       background-color: lighten($coloredText, 10%);
     }
+  }
+
+  .prev {
+    left: 5%;
+    transform: scaleX(-1);
+    display: none;
   }
 
   .sliderImage__navBlock {
@@ -463,6 +469,19 @@
 
   .videoItem {
     width: 60.17%;
+  }
+
+  .requestForm__nameInput,
+  .requestForm__phoneInput,
+  .requestForm__emailInput {
+    &::placeholder {
+      color: $primaryTextColor;
+    }
+
+    &::-moz-placeholder {
+      color: $primaryTextColor;
+      opacity: 1; //this property is for Firefox
+    }
   }
 
   .broadcast__description {
@@ -877,7 +896,7 @@
 
   .card__description {
     top: 300px;
-    height: fit-content;
+    height: max-content
   }
 }
 
