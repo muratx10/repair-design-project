@@ -228,6 +228,13 @@
 @media only screen and (max-width: 995px) {
   .design {
 
+    .dots {
+      display: unset;
+    }
+
+    .hide {
+      display: none;
+    }
     .designProject {
       grid: 1fr / 1fr;
 
@@ -237,37 +244,49 @@
         grid-row-gap: 50px;
 
         .card {
-          //grid: 1fr / 1fr;
+          grid: minmax(300px, 600px) / 1fr;
+          position: relative;
+
 
           .card__description {
             position: relative;
-
-            top: unset;
             left: 0;
+            justify-self: left;
+            top: unset;
 
             .card__title {
               font-size: 34px;
             }
 
             .card__features {
-              font-size: 24px;
-              line-height: 34px;
+              font-size: 30px;
+              line-height: 70px;
+            }
+
+            .card__Tag {
+              font-size: 30px;
+              width: 50%;
+              height: 90px;
             }
           }
         }
 
-        //  .card:nth-child(2) {
-        //    .card__description {
-        //      bottom: -20%;
-        //
-        //    }
-        //  }
-        //
-        //.card:nth-child(3) {
-        //  .card__description {
-        //    bottom: -30%;
-        //  }
-        //}
+        .card:nth-child(1) {
+          //overflow: hidden;
+
+          .card__description {
+            max-height: 400px;
+            bottom: -165px;
+          }
+        }
+
+        .card:nth-child(2), .card:nth-child(3) {
+
+          .card__description {
+            max-height: 650px;
+            bottom: 0;
+          }
+        }
       }
     }
   }
@@ -310,5 +329,68 @@
 
     }
   }
+
+    .feedbackWrapper {
+
+      .map {
+        width: 90%;
+        margin: 20px auto;
+      }
+    }
+
+  .mainSectionWrapper:nth-child(5) {
+    background: linear-gradient(0deg,#fff,#fff 81%,#131313 0,#131313);
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  header {
+
+    .innerWrapper_header {
+
+      .navigationBar {
+        grid: 1fr / 1fr 1fr;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 90vw;
+
+        .navMenu {
+          display: none;
+        }
+
+        .contacts {
+            justify-self: end;
+          .contacts__phoneNo {
+            display: block;
+            //width: 90%;
+            justify-self: unset;
+            position: relative;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+
+  }
+
+  .broadcast {
+    .broadcast__requestForm {
+      display: none;
+    }
+  }
+
+  .repairStyles {
+
+    .repairStyles__title,
+    .repairStyles__itemsContainer,
+    .imageContainer {
+      display: none;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
 
 }
