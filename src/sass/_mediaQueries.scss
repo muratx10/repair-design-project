@@ -395,11 +395,11 @@
   }
 
   main {
-    
+
     .mainSectionWrapper:nth-child(3) {
-      
+
       .mainSectionWrapper {
-        
+
         .design {
 
           .designProject {
@@ -544,7 +544,7 @@
 
 @media only screen and (max-width: 768px) {
   main {
-    
+
     .mainSectionWrapper:nth-child(3) {
       display: grid;
       grid: repeat(auto-fit, 1fr) / 1fr;
@@ -561,7 +561,7 @@
       }
 
       .mainSection:nth-child(3) {
-        
+
         .repairStyles {
           display: grid;
           background: linear-gradient(0deg, #131313, #131313 35%, #FFFFFF 0, #FFFFFF);
@@ -772,7 +772,7 @@
 
 @media only screen and (max-width: 576px) {
   main {
-    
+
     .feedbackWrapper {
 
       .callForm {
@@ -803,7 +803,7 @@
         .design {
 
           .designProject {
-            
+
             .designProject__title {
               padding: 0 30px;
 
@@ -863,6 +863,19 @@
 
     .mainSectionWrapper {
 
+      .mainSection:nth-child(2) {
+
+        .portfolio {
+
+          .portfolio__textSlider {
+
+            .portfolio__Text {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
       .mainSection {
 
         .portfolio {
@@ -916,14 +929,41 @@
 
     .mainSectionWrapper:nth-child(3) {
 
+      .mainSection {
+
+        .services {
+
+          .card__Tag.primaryBtnStyling {
+            font-size: 15px;
+          }
+        }
+      }
+
+      .repairStyles {
+        h2 {
+          font-size: 22px;
+        }
+      }
+
       .mainSectionWrapper {
-       
+
+        .design {
+
+          .designProject {
+            padding-top: 0;
+          }
+
+          .designProject__description {
+            font-size: 15px;
+          }
+        }
+
         .mainSection.team {
-       
+
           .teamWrapper {
-       
+
             .team__title {
-       
+
               .team__description {
                 font-size: 15px;
                 width: 90%;
