@@ -5,9 +5,7 @@
 4. Run `npm run build` to compile project in production mode OR run `npm run 
 dev` to compile project in development mode
 
-_*NOTE: in development mode project will start in Google Chrome browser by 
-default_
 
+## [Task description](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/markups/level-3/repair-design-project/repair-design-project-en.md)
 
-
-[repair-design-project. Difficulty Level 3.](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/markups/level-3/repair-design-project/repair-design-project-en.md)
+## [Deployed projecton on __netlify__](https://repair-design.netlify.com)
