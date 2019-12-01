@@ -135,7 +135,6 @@
   align-content: center;
   padding-left: 60px;
   transition: 300ms;
-  outline: aqua 1px dashed;
   background: url("../images/image1.jpg") no-repeat;
   grid-row-gap: 40px;
 
@@ -282,39 +281,6 @@
   user-select: none;
   grid: 125px 5fr / 1fr;
 
-  .sliderImage__Btn {
-    position: absolute;
-    top: 45%;
-    right: 5%;
-    display: block;
-    width: 55px;
-    height: 55px;
-    cursor: pointer;
-    transition: 300ms;
-    border-radius: 50%;
-    background-color: $coloredText;
-
-    svg {
-      position: absolute;
-      top: 35%;
-      left: 42%;
-    }
-
-    &:hover {
-      background: darken($coloredText, 10%);
-    }
-
-    &:active {
-      background-color: lighten($coloredText, 10%);
-    }
-  }
-
-  .prev {
-    left: 5%;
-    transform: scaleX(-1);
-    display: none;
-  }
-
   .sliderImage__navBlock {
     align-self: center;
     width: 70%;
@@ -350,7 +316,45 @@
     width: 100%;
     grid: 1fr / 81% 81%;
     grid-column-gap: 20px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
+}
+
+.sliderImage__Btn {
+  position: absolute;
+  top: calc(50% - (55px / 2));
+  right: 5%;
+  display: block;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  transition: 300ms;
+  border-radius: 50%;
+  background-color: $coloredText;
+
+  svg {
+    position: absolute;
+    top: 35%;
+    left: 42%;
+  }
+
+  &:hover {
+    background: darken($coloredText, 10%);
+  }
+
+  &:active {
+    background-color: lighten($coloredText, 10%);
+  }
+}
+
+.prev {
+  left: 5%;
+  display: none;
+  transform: scaleX(-1);
 }
 
 .portfolio__title {
@@ -454,6 +458,7 @@
 }
 
 .broadcast {
+  
   .mainSection__title {
     @include sectionTitle;
 
@@ -479,8 +484,8 @@
     }
 
     &::-moz-placeholder {
-      color: $primaryTextColor;
       opacity: 1; //this property is for Firefox
+      color: $primaryTextColor;
     }
   }
 
@@ -520,6 +525,7 @@
 }
 
 .services {
+  
   .services__title {
     @include sectionTitle;
     height: fit-content;
@@ -705,7 +711,6 @@
 .callForm {
   width: 93%;
   height: 506px;
-  //max-width: 509px;
   background: $backgroundColorPrimary;
   justify-self: right;
 
@@ -792,6 +797,17 @@
 }
 
 .repairStyles {
+  
+  .image {
+    position: relative;
+  }
+
+  .sliderImage__Btn,
+  .prev,
+  img {
+    display: none;
+  }
+
   .repairStyles__title {
     font-family: "Yeseva One", "Times New Roman", serif;
     font-size: 1.6875rem;
@@ -905,6 +921,7 @@
 }
 
 .design {
+ 
   .portfolio__title {
     position: relative;
 
@@ -953,7 +970,7 @@
 
   .sliderImage {
     grid: 5.5fr 10fr / 1fr;
-    //background: rgba(201, 235, 52, 0.5);
+  
     img {
       align-self: end;
       width: 125%;
@@ -1328,8 +1345,8 @@
       }
 
       &:hover {
-        background: darken($primaryBtnColor, 15%);
         transform: scale(1.3);
+        background: darken($primaryBtnColor, 15%);
       }
 
       &:active {
@@ -1339,9 +1356,9 @@
   }
 
   .map {
-    text-align: center;
-    margin: 50px 0;
     max-width: 100%;
+    margin: 50px 0;
+    text-align: center;
 
     img {
       max-width: 100%;
@@ -1349,4 +1366,7 @@
   }
 }
 
+.mobile {
+  display: none;
+}
 

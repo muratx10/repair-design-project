@@ -1,8 +1,8 @@
 body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  box-sizing: border-box;
 }
 
 :root {
@@ -20,11 +20,10 @@ body {
 }
 
 .mainSection + .mainSection {
-  max-width: 1358px; //1440-82=1358px
   position: relative;
+  max-width: 1358px; //1440-82=1358px
   padding-left: 82px;
 }
-
 
 
 .mainSectionWrapper:nth-child(2) {
@@ -32,80 +31,78 @@ body {
 }
 
 .mainSectionWrapper:nth-child(4) {
-  background: linear-gradient(0deg, #131313, #131313 64.5%, #ffffff 0, #ffffff);
+  background: linear-gradient(0deg, #131313, #131313 64.5%, #FFFFFF 0, #FFFFFF);
 }
 
 .mainSectionWrapper:nth-child(5) {
-  background: linear-gradient(0deg, #FFFFFF, #FFFFFF 76%, #131313 0, #131313);
   overflow: unset;
+  background: linear-gradient(0deg, #FFFFFF, #FFFFFF 76%, #131313 0, #131313);
 }
 
 .mainSectionWrapper:nth-child(6) {
-  background: linear-gradient(0deg, #1E1E1E, #1E1E1E 80.8%, #ffffff 0, #ffffff);
   overflow: unset;
+  background: linear-gradient(0deg, #1E1E1E, #1E1E1E 80.8%, #FFFFFF 0, #FFFFFF);
 }
 
 .mainSectionWrapper:nth-child(3) {
   background: #FFFFFF;
-  outline: 1px dashed mediumvioletred;
+
   .mainSection {
-    outline: 1px dashed mediumvioletred;
-    grid: 1fr / 1fr;
-    min-height: unset;
     max-width: 1276px; //1440 - 82 - 82 = 1276px
+    min-height: unset;
+    grid: 1fr / 1fr;
   }
 
   //section where circle
   .mainSection:nth-child(2) {
+    overflow: hidden;
     max-width: 1358px;
     padding: 0 82px 0 0;
-    overflow: hidden;
   }
 
   .mainSection:nth-child(3) {
-    padding: 0;
     max-width: 1440px;
+    padding: 0;
   }
 
   .mainSection:nth-child(4) {
-    padding: 0;
     max-width: 1276px; //1440 - 82 - 82 = 1276px
+    padding: 0;
   }
 }
 
 .mainSection {
   display: grid;
-  grid: 1fr / 82px 11fr;
   width: 100%;
   min-height: 707px;
   transition: 300ms;
-  outline: aqua 1px dashed;
+  grid: 1fr / 82px 11fr;
   grid-auto-flow: dense;
 
   @media only screen and (max-width: 800px) {
-    padding: 0;
     margin: 0;
+    padding: 0;
   }
 
   @media only screen and(max-width: 768px) {
     grid: 1fr / 50px 11fr;
   }
   @media only screen and (max-width: 667px) {
-    grid: 1fr / 1fr;
     height: 690px;
+    grid: 1fr / 1fr;
   }
 }
 
 
 .navigationBar {
   display: grid;
-  grid: 1fr /3fr 7fr 4fr;
   width: 90%;
   height: 40px;
   margin: 0 0 0 82px;
   padding: 22px 0;
   transition: 300ms;
   color: $whiteText;
+  grid: 1fr /3fr 7fr 4fr;
   @media only screen and (max-width: 1024px) {
     grid: 1fr / 3fr 9fr;
   }
@@ -113,68 +110,66 @@ body {
     margin: 0 0 0 50px;
   }
   @media only screen and (max-width: 667px) {
-    grid: 1fr / 1fr 1fr;
-    justify-items: center;
     align-items: center;
     width: 100%;
     margin: 0;
+    grid: 1fr / 1fr 1fr;
+    justify-items: center;
   }
 }
 
 .portfolio {
   display: grid;
+  width: 100%;
   grid: 1fr/ 4.52fr 8fr;
   grid-column: 1 / span 2;
-  width: 100%;
-  outline: aqua 1px dashed;
 }
 
 .portfolio__textSlider {
   display: grid;
-  grid: 95px .5fr .5fr 1fr .38fr/1fr;
-  grid-template-areas: "blank" "title" "description" "specs" "sliderBtn";
   width: 85%;
   margin: 0;
+  grid: 95px .5fr .5fr 1fr .38fr/1fr;
+  grid-template-areas: "blank" "title" "description" "specs" "sliderBtn";
 }
 
 .broadcast {
   display: grid;
+  padding-bottom: 100px;
+  background: linear-gradient(0deg, #FFFFFF, #FFFFFF 67.5%, #131313 0, #131313);
   grid: 85px minmax(200px, 460px) auto / 100%;
   grid-column: 1 / span 12;
   grid-row-gap: 20px;
   justify-items: center;
-  background: linear-gradient(0deg, #FFFFFF, #FFFFFF 67.5%, #131313 0, #131313);
-  padding-bottom: 100px;
 }
 
 .services {
   display: grid;
-  grid: .25fr 2fr / 100%;
   justify-content: center;
   width: 100%;
+  grid: .25fr 2fr / 100%;
 }
 
 .measurement {
-  display: grid;
-  grid: 1fr / 6fr 4fr;
-  align-items: center;
   position: relative;
-  padding-bottom: 40px;
+  display: grid;
+  align-items: center;
   margin-bottom: 150px;
+  padding-bottom: 40px;
+  grid: 1fr / 6fr 4fr;
 }
 
 .repairStyles {
+  position: relative;
+  z-index: 0;
   display: grid;
-  grid: .5fr 1.5fr / 4fr 6fr;
-  grid-template-areas: 'title imageContainer'
-                       'styleItems imageContainer';
+  min-height: 865px;
+  padding: 0 82px 0;
   background: url("../images/interior.jpg") no-repeat;
   -webkit-background-size: 100%;
   background-size: 130%;
-  min-height: 865px;
-  padding: 0 82px 0;
-  position: relative;
-  z-index: 0;
+  grid: .5fr 1.5fr / 4fr 6fr;
+  grid-template-areas: 'title imageContainer' 'styleItems imageContainer';
 
   &:after {
     @include darkenBg;
@@ -182,17 +177,17 @@ body {
 
   .imageContainer {
     display: grid;
-    grid:1fr / 1fr 1fr;
-    grid-column-gap: 40px;
     width: 300px;
     height: 300px;
+    grid: 1fr / 1fr 1fr;
+    grid-column-gap: 40px;
   }
 }
 
 .designProject {
   display: grid;
-  grid: .25fr .25fr/ 100%;
   padding-top: 150px;
+  grid: .25fr .25fr/ 100%;
 }
 
 

@@ -1,4 +1,5 @@
 .primaryBtnStyling {
+  cursor: pointer;
   transition: 0.3s;
   text-transform: uppercase;
   color: $whiteText;
@@ -7,7 +8,6 @@
   outline: none;
   background-color: $primaryBtnColor;
   box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
-  cursor: pointer;
 
   &:focus {
     outline: none;
@@ -23,6 +23,7 @@
 }
 
 .transparentBtnStyling {
+  cursor: pointer;
   transition: 0.3s;
   text-transform: uppercase;
   color: $whiteText;
@@ -30,7 +31,6 @@
   border-radius: 2px;
   outline: none;
   background-color: rgba(0, 0, 0, 0);
-  cursor: pointer;
 
   &:focus {
     outline: none;
@@ -51,17 +51,17 @@
 }
 
 .submitBtn {
-  width: 200px;
-  min-width: 100px;
-  height: 51px;
   font-family: FuturaDemiC, Arial, sans-serif;
   font-size: 0.9375rem;
   line-height: 1.625rem;
+  width: 200px;
+  min-width: 100px;
+  height: 51px;
+  cursor: pointer;
   transition: 300ms;
   text-align: center;
   text-transform: uppercase;
   color: $whiteText;
-  cursor: pointer;
   border: none;
   border-radius: 4px;
   background-color: $coloredText;
@@ -78,50 +78,51 @@
 //custom checkbox
 
 .chBox {
-  grid-area: chBox;
-  position: relative;
   font-size: 1rem;
   line-height: 1.375rem;
+  position: relative;
   padding-left: 30px;
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+  grid-area: chBox;
+
   &:checked {
     background-color: red;
   }
 
   input {
-    width: 0;
-    height: 0;
     position: absolute;
     z-index: 3;
+    width: 0;
+    height: 0;
     cursor: pointer;
     opacity: 0;
   }
 
   .checkEmulate {
-    width: 18px;
-    height: 18px;
     position: absolute;
+    z-index: 2;
     top: 0;
     left: 0;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
     transition: 200ms;
     background-color: #EEEEEE;
-    z-index: 2;
-    cursor: pointer;
 
     &:after {
-      content: "";
-      width: 5px;
-      height: 10px;
       position: absolute;
       top: 1px;
       left: 6px;
+      display: none;
+      width: 5px;
+      height: 10px;
+      content: "";
       -ms-transform: rotate(45deg);
       -webkit-transform: rotate(45deg);
       transform: rotate(45deg);
-      display: none;
       border: solid white;
       border-width: 0 2px 2px 0;
     }
@@ -145,10 +146,10 @@
 //request form
 .requestForm {
   display: grid;
+  padding-bottom: 30px;
   grid: 1fr 1fr 60px / 1fr 1fr 1fr;
   grid-template-areas: "name phone submit" "nameInp phoneInp submit" "chBox chBox chBox";
   grid-column-gap: 58px;
-  padding-bottom: 30px;
 }
 
 .nameLabel {
@@ -175,12 +176,12 @@
 .requestForm__phoneInput,
 .requestForm__emailInput,
 .requestForm__questionInput {
-  display: block;
-  width: 231px;
-  height: 18px;
   font-family: FuturaBookC, Arial, sans-serif;
   font-size: 1.125rem;
   line-height: 1.5rem;
+  display: block;
+  width: 231px;
+  height: 18px;
   padding-bottom: 5px;
   color: $primaryTextColor;
   border: none;
@@ -192,8 +193,8 @@
   }
 
   &::-moz-placeholder {
-    color: $whiteText;
     opacity: 1; //this property is for Firefox
+    color: $whiteText;
   }
 
   &:focus {
@@ -213,10 +214,10 @@
 }
 
 .chBox {
-  grid-area: chBox;
   align-self: end;
-  justify-self: center;
   transform: translateX(-15px);
   color: $primaryTextColor;
+  grid-area: chBox;
+  justify-self: center;
 }
 

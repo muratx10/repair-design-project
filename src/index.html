@@ -184,23 +184,58 @@
                             </ul>
                         </nav>
                         <div class="sliderImage__images">
-                            <img alt="Interior1" src="images/image2.jpg" width="100%">
-                            <img alt="Interior2" src="images/image2-1.jpg" width="100%">
+                            <img alt="Interior1" src="images/image2.jpg">
+                            <img alt="Interior2" src="images/image2-1.jpg">
+                            <span class="sliderImage__Btn next buttonShadow"><svg fill="none" height="19"
+                                    viewBox="0 0 11 19" width="11" xmlns="http://www.w3.org/2000/svg">
+                                    <path clip-rule="evenodd"
+                                        d="M1.97923 1.03418L10.3066 9.3607L1.97923 17.6872L0.790527 16.4986L7.92914 9.3607L0.790527 2.22277L1.97923 1.03418Z"
+                                        fill="white" fill-rule="evenodd" stroke="white" stroke-width="0.75" />
+                                </svg>
+                            </span>
+                            <span class="sliderImage__Btn prev buttonShadow"><svg fill="none" height="19"
+                                    viewBox="0 0 11 19" width="11" xmlns="http://www.w3.org/2000/svg">
+                                    <path clip-rule="evenodd"
+                                        d="M1.97923 1.03418L10.3066 9.3607L1.97923 17.6872L0.790527 16.4986L7.92914 9.3607L0.790527 2.22277L1.97923 1.03418Z"
+                                        fill="white" fill-rule="evenodd" stroke="white" stroke-width="0.75" />
+                                </svg>
+                            </span>
                         </div>
-                        <span class="sliderImage__Btn next buttonShadow"><svg fill="none" height="19"
-                                viewBox="0 0 11 19" width="11" xmlns="http://www.w3.org/2000/svg">
-                                <path clip-rule="evenodd"
-                                    d="M1.97923 1.03418L10.3066 9.3607L1.97923 17.6872L0.790527 16.4986L7.92914 9.3607L0.790527 2.22277L1.97923 1.03418Z"
-                                    fill="white" fill-rule="evenodd" stroke="white" stroke-width="0.75" />
-                            </svg>
-                        </span>
-                        <span class="sliderImage__Btn prev buttonShadow"><svg fill="none" height="19"
-                                viewBox="0 0 11 19" width="11" xmlns="http://www.w3.org/2000/svg">
-                                <path clip-rule="evenodd"
-                                    d="M1.97923 1.03418L10.3066 9.3607L1.97923 17.6872L0.790527 16.4986L7.92914 9.3607L0.790527 2.22277L1.97923 1.03418Z"
-                                    fill="white" fill-rule="evenodd" stroke="white" stroke-width="0.75" />
-                            </svg>
-                        </span>
+                        <div class="portfolioSpecs mobile">
+                            <div class="portfolioSpecs__item">
+                                <p class="portfolioSpecs__title">
+                                    City:
+                                </p>
+                                <p class="portfolioSpecs__content">
+                                    Rostov-on-Don <br> LCD admiral
+                                </p>
+                            </div>
+                            <div class="portfolioSpecs__item">
+                                <p class="portfolioSpecs__title">
+                                    apartment area:
+                                </p>
+                                <p class="portfolioSpecs__content">
+                                    81 m2
+                                </p>
+                            </div>
+                            <div class="portfolioSpecs__item">
+                                <p class="portfolioSpecs__title">
+                                    Repair time:
+                                </p>
+                                <p class="portfolioSpecs__content">
+                                    3.5 months
+                                </p>
+                            </div>
+
+                            <div class="portfolioSpecs__item">
+                                <p class="portfolioSpecs__title">
+                                    Repair Cost:
+                                </p>
+                                <p class="portfolioSpecs__content">
+                                    Upon request
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
@@ -376,6 +411,23 @@
                 <div class="repairStyles">
                     <h2 class="repairStyles__title">We realize your <br> wildest
                         fantasies</h2>
+                    <div class="image">
+                        <img src="images/interior.jpg" alt="interior">
+                        <span class="sliderImage__Btn next buttonShadow"><svg fill="none" height="19"
+                                viewBox="0 0 11 19" width="11" xmlns="http://www.w3.org/2000/svg">
+                                <path clip-rule="evenodd"
+                                    d="M1.97923 1.03418L10.3066 9.3607L1.97923 17.6872L0.790527 16.4986L7.92914 9.3607L0.790527 2.22277L1.97923 1.03418Z"
+                                    fill="white" fill-rule="evenodd" stroke="white" stroke-width="0.75" />
+                            </svg>
+                        </span>
+                        <span class="sliderImage__Btn prev buttonShadow"><svg fill="none" height="19"
+                                viewBox="0 0 11 19" width="11" xmlns="http://www.w3.org/2000/svg">
+                                <path clip-rule="evenodd"
+                                    d="M1.97923 1.03418L10.3066 9.3607L1.97923 17.6872L0.790527 16.4986L7.92914 9.3607L0.790527 2.22277L1.97923 1.03418Z"
+                                    fill="white" fill-rule="evenodd" stroke="white" stroke-width="0.75" />
+                            </svg>
+                        </span>
+                    </div>
                     <ul class="repairStyles__itemsContainer">
                         <li class="repairStyles__item"><a class="repairStyles__item link" href="">American
                                 classic</a>
@@ -414,6 +466,7 @@
                             <span class="imageContainer__image"></span>
                         </div>
                     </div>
+
                 </div>
             </div>
             <div class="mainSectionWrapper">
@@ -776,12 +829,12 @@
                         <div class="callForm">
                             <h4 class="callForm__title">Have any questions?</h4>
                             <form action="#" class="requestForm" name="callForm">
-                                <label class="nameLabel" for="name">Name
-                                    <input class="requestForm__nameInput" name="name" pattern="[A-Za-z]{1,32}"
-                                        placeholder="What is your name:" required type="text">
+                                <label class="nameLabel" for="name2">Name
+                                    <input class="requestForm__nameInput" name="name2" id="name2"
+                                        pattern="[A-Za-z]{1,32}" placeholder="What is your name:" required type="text">
                                 </label>
-                                <label class="phoneLabel" for="phone">Phone
-                                    <input class="requestForm__phoneInput" name="phone"
+                                <label class="phoneLabel" for="phone2">Phone
+                                    <input class="requestForm__phoneInput" name="phone2" id="phone2"
                                         pattern="^\+375(17|29|33|44)[0-9]{3}[0-9]{2}[0-9]{2}$"
                                         placeholder="Your phone number:" required type="text">
                                 </label>
@@ -805,8 +858,8 @@
                         <div class="feedbackWrapper__contacts">
                             <h4>
                                 Rostov-on-Don, Nansen St., 239 Shopping
-                                Center <br> Decorum TEL <a class="contacts__link" href="tel:+79287683239">+7
-                                    (928) 768-32-39</a>
+                                Center <br> Decorum <a class="contacts__link" href="tel:+79287683239">
+                                    TEL&nbsp;&nbsp;+7&nbsp;(928)&nbsp;768-32-39</a>
                             </h4>
                             <div class="socialIcon">
                                 <a href="#" class="instagramIcon"><img src="images/instagramIcon.svg" alt="insta"></a>
@@ -853,8 +906,8 @@
                         </ul>
                     </nav>
                     <div class="contacts">
-                        <div class="contacts__phoneNo"><a class="contacts__link" href="tel:+79287683239">+7
-                                (928) 768-32-39</a></div>
+                        <div class="contacts__phoneNo"><a class="contacts__link" href="tel:+79287683239">
+                                +7&nbsp;(928)&nbsp;768-32-39</a></div>
                         <button class="contacts__callBtn primaryBtnStyling">
                             Request a call
                         </button>
@@ -863,8 +916,6 @@
             </div>
         </div>
     </footer>
-
-
 </body>
 
 </html>
