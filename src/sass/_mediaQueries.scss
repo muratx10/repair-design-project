@@ -1025,3 +1025,10 @@
     }
   }
 }
+
+@media only screen and (min-width: 1140px) {
+  .sliderImage__Btn {
+    position: absolute;
+    top: 55%;
+  }
+};

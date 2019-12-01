@@ -458,7 +458,7 @@
 }
 
 .broadcast {
-  
+
   .mainSection__title {
     @include sectionTitle;
 
@@ -525,7 +525,7 @@
 }
 
 .services {
-  
+
   .services__title {
     @include sectionTitle;
     height: fit-content;
@@ -797,7 +797,7 @@
 }
 
 .repairStyles {
-  
+
   .image {
     position: relative;
   }
@@ -846,7 +846,7 @@
 
 .imageContainer__firstCol {
   position: relative;
-  top: -40px;
+  top: -27%;
 
   .imageContainer__image:nth-child(1) {
     display: block;
@@ -866,7 +866,7 @@
 
 .imageContainer__secondCol {
   position: relative;
-  top: -110px;
+  top: -37%;
 
   .imageContainer__image:nth-child(1) {
     display: block;
@@ -921,7 +921,7 @@
 }
 
 .design {
- 
+
   .portfolio__title {
     position: relative;
 
@@ -970,7 +970,7 @@
 
   .sliderImage {
     grid: 5.5fr 10fr / 1fr;
-  
+
     img {
       align-self: end;
       width: 125%;
