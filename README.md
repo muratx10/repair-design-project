@@ -8,4 +8,4 @@ dev` to compile project in development mode
 
 ## [Task description](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/markups/level-3/repair-design-project/repair-design-project-en.md)
 
-## [Deployed projecton on __netlify__](https://repair-design.netlify.com)
+## [Deployed project on netlify](https://repair-design.netlify.com)
